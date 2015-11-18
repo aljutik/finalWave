@@ -141,25 +141,43 @@ $$\F=\rot(L\bar{e}_z)+\frac1{k_\tau}\rot\rot(M\bar{e}_z)=\rot(L\bar{e}_z)+k_\tau
 \end{align}
 
 Соотношения между компонентами тензора напряжений $\sigma_{ij}$ и вектора смещения $\bar{u}$ в однородном изотропном упругом цилиндре записываются следующим образом:
-\begin{align}
+\begin{equation}
+\begin{aligned}
 &\sigma_{rr}=\lambda\Biggl(\frac{\partial u_r}{\partial r}+\frac{1}{r}\biggl(\frac{\partial u_\f}{\partial\f}+u_r\biggr)+\frac{\partial u_z}{\partial z}\Biggr)+2\:\mu\:\frac{\partial u_r}{\partial r},\\
 &\sigma_{\f\f}=\lambda\Biggl(\frac{\partial u_r}{\partial r}+\frac{1}{r}\biggl(\frac{\partial u_\f}{\partial\f}+u_r\biggr)+\frac{\partial u_z}{\partial z}\Biggr)+2\:\mu\:\biggl(\frac{1}{r}\frac{\partial u_\f}{\partial\f}+\frac{u_r}{r}\biggr),\\
 &\sigma_{zz}=\lambda\Biggl(\frac{\partial u_r}{\partial r}+\frac{1}{r}\biggl(\frac{\partial u_\f}{\partial\f}+u_r\biggr)+\frac{\partial u_z}{\partial z}\Biggr)+2\:\mu\:\frac{\partial u_z}{\partial z},\\
 &\sigma_{r\f}=\mu\Biggl(\frac{1}{r}\frac{\partial u_r}{\partial\f}+\frac{\partial u_\f}{\partial r}-\frac{u_{\f}}{r}\Biggr),\\
 &\sigma_{rz}=\mu\Biggl(\frac{\partial u_z}{\partial r}+\frac{\partial u_r}{\partial z}\Biggr),\\
 &\sigma_{\f z}=\mu\Biggl(\frac{\partial u_\f}{\partial z}+\frac{1}{r}\frac{\partial u_z}{\partial \f}\Biggr).
-\end{align}
+\end{aligned}
+\end{equation}
 
 Уравнения движения неоднородного изотропного упругого цилиндрического слоя в случае установившихся колебаний в цилиндрической системе координат имеют вид:
-\begin{align}
+\begin{equation}
+\begin{aligned}
 \frac{\partial\sigma_{rr}}{
 \partial r}+\frac{1}{r}\frac{\partial\sigma_{r\f}}{\partial\f}+\frac{\partial\sigma_{rz}}{\partial z}+\frac{\sigma_{rr}-\sigma_{\f\f}}{r}&=-\omega^2\rho(r)u_r,\\
 \frac{\partial\sigma_{r\f}}{
 \partial r}+\frac{1}{r}\frac{\partial\sigma_{\f\f}}{\partial\f}+\frac{\partial\sigma_{\f z}}{\partial z}+\frac{2}{r}\sigma_{r\f}&=-\omega^2\rho(r)u_{\f},\\
 \frac{\partial\sigma_{rz}}{
-\partial r}+\frac{1}{r}\frac{\partial\sigma_{\f z}}{\partial\f}+\frac{\partial\sigma_{zz}}{\partial z}+\frac{1}{r}\sigma_{rz}&=-\omega^2\rho(r)u_z.
-\end{align}
+\partial r}+\frac{1}{r}\frac{\partial\sigma_{\f z}}{\partial\f}+\frac{\partial\sigma_{zz}}{\partial z}+\frac{1}{r}\sigma_{rz}&=-\omega^2\rho(r)u_z,
+\end{aligned}
+\end{equation}
+где $u_r, u_{\f}, u_z$ -- компоненты вектора смещения $\bar{u}$ частиц неоднородного слоя; $\sigma_{ij}$ -- компоненты тензора напряжений в неоднородном слое.
 
+Соотношения между компонентами тензора напряжений $\sigma_{ij}$ и вектора смещения $\bar{u}$ в неоднородном упругом цилиндрическом слое аналогичны соотношениям для однородного упругого цилиндра, при этом упругие постоянные $\lambda$ и $\mu$ следует заменить на функции $\lambda=lambda(r)$ и $\mu=\mu(r).$
+
+Используя эти соотношения, запишем уравнения ССЫЛКА!!! через компоненты вектора смещения $\mu.$ Получим
+\begin{equation}
+\begin{aligned}
+\frac{\partial\sigma_{rr}}{
+\partial r}+\frac{1}{r}\frac{\partial\sigma_{r\f}}{\partial\f}+\frac{\partial\sigma_{rz}}{\partial z}+\frac{\sigma_{rr}-\sigma_{\f\f}}{r}&=-\omega^2\rho(r)u_r,\\
+\frac{\partial\sigma_{r\f}}{
+\partial r}+\frac{1}{r}\frac{\partial\sigma_{\f\f}}{\partial\f}+\frac{\partial\sigma_{\f z}}{\partial z}+\frac{2}{r}\sigma_{r\f}&=-\omega^2\rho(r)u_{\f},\\
+\frac{\partial\sigma_{rz}}{
+\partial r}+\frac{1}{r}\frac{\partial\sigma_{\f z}}{\partial\f}+\frac{\partial\sigma_{zz}}{\partial z}+\frac{1}{r}\sigma_{rz}&=-\omega^2\rho(r)u_z,
+\end{aligned}
+\end{equation}
 \newpage
 \subsection{Решение краевой задачи для системы обыкновенных дифференциальных уравнений}
 
