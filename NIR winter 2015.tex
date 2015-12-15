@@ -1,0 +1,169 @@
+\input{top.tex}
+
+\renewcommand{\bibname}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+\renewcommand\refname{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+
+%\input{title.tex}
+
+%\newpage
+\setcounter{page}{2}
+\thispagestyle {empty}
+\renewcommand{\contentsname}{\centering СОДЕРЖАНИЕ}
+\tableofcontents
+
+\newpage
+\section*{ВВЕДЕНИЕ}
+\addcontentsline{toc}{section}{ВВЕДЕНИЕ}
+\todo{Акустика, применени акустики}
+
+Существуют разлиные подходы к изменению звукоотражающих характеристик тел в определенных направлениях. Изменение характеристик рассеяния звука упругих тел можно осуществить с помощью специальных покрытий. Представляет интерес исследовать звукоотражающие свойства тел с покрытиями в виде непрерывно неоднородного упругого слоя. Такой слой легко реализовать с помощью системы тонких однородных упругих слоев с различными значениями механических параметров (плотности и упругих постоянных).
+
+В настоящей работе решается задача о рассеянии плоской монохраматической звуковой волны, падающей наклонно на упругий круговой цилиндр с неконцентрической полостью, покрытый радиально-неоднородным упругим слоем.
+
+\newpage
+\section{Постановка задачи} 
+\todo{Рисунок и рассмотрим, пусть. И закончить Требуется найти волновые поля в упругом теле.}
+
+Рассмотрим бесконечный однородный упругий цилиндр с внешним радиусом $R\cyl,$ материал которого характеризуется плотностью $p\cyl$ и упругими постоянными $\lambda\cyl$ и $\mu\cyl.$ Цилиндр имеет произвольно расположенную цилиндрическую полость с радиусом $R\c.$ Оси цилиндра и полости являются параллельными. Цилиндр имеет покрытие в виде неоднородного изотропного упругого слоя, внешний радиус которого равен $R\l.$ Для решения задачи ввдем цилиндрические системы координат $\r\cyl, \f\cyl, z\cyl$ и $\r\c, \f\c, z\c,$ связанные с цилиндром и его полостью соответственно.
+
+Полагаем, что модули упругости $\lambda\l$ и $\mu\l$ материала неоднородного цилиндрического слоя опиcываются дифференциируемыми функциями цилиндрической радиальной координаты $\r\cyl,$ а плотность $p\l$ -- непрерывной функцией координаты~$\r\cyl.$ 
+
+Будем считать, что окружающая цилиндр и находящаяся в его полости жидкость являются идеальными и однородными, имеющими в невозмущенном состоянии плотности $\r\en, \r\c$ и скорости звука $c\en, c\c$ соответственно.
+
+Пусть из внешнего пространства на цилиндр произвольным образом падает плоская звуковая волна, потенциал скоростей которой равен
+$$\P\o=A\o \exp\{i[(\bar{k}\en)\cdot \bar{r}\o)-\omega t]\},$$
+где $A\o$ -- амплитуда волны; $\bar{k}\en$ -- волновой вектор падающей волны; $\bar{r}\o$ -- радиус-вектор; $\omega$ -- круговая частота. В дальнейшем временной множитель $\exp\{-i\omega t\}$ будем опускать.
+
+В цидиндрической системе координат падающая волна запишется в виде
+$$\P\o=A\o\exp\{ik\en[r\o\sin{\hat{\theta}\en}\cos(\f\en-\hat{\f}\en)+z\cos\hat{\Q}\en]\},$$
+где $\hat{\theta}\en$ и $\hat{\f}\en$ -- полярный и азимутальный углы падения волны; $k\en=\omega / c\en$ -- волновое число во внешней области.
+
+Определим отраженную от цилиндра волну и возбужденную в его полости звуковые волны, а также найдем поля смещений в упругом цилиндре и неоднородном слое.
+
+\newpage
+\section{Аналитическое решение задачи}
+
+Потенциал скоростей падающей плоской волны представим в виде
+$$\P\o(\r\cyl, \f\cyl, z\cyl)=A_0\exp\{i\alpha\cyl z\cyl\}\sum_{n=-\infty}^{\infty}i^nJ_n(\beta\cyl \r\cyl)\exp\{in(\f\cyl-\hat\f\cyl)\},$$
+где $J_n(x)$ -- цилиндрическая функция Бесселя порядка $n;$ $\alpha\cyl=k\cyl\cos\hat\theta\en;$ \\$\beta\cyl=k\cyl\sin\hat\theta\en.$
+
+В установившемся режиме колебаний задача определения акустических полей вне цилиндра и внутри его полости заключается в нахожждении решений уравнения Гельмгольца
+\begin{align}
+&\Lap\P\c+k\c^2\P\c=0,\\
+&\Lap\P\en+k\en^2\P\en=0\label{eq_gel_for_enviroment},
+\end{align}
+где $\P\c$ -- потенциал скоростей акустического поля в полости цилиндра;\\ $k\c=\frac{\omega}{c\c}$ -- волновое число жидкочти в полости цилиндра;
+$\P\en$ -- потенциал скоростей полного акустического поля во внешней среде. 
+
+В силу линейной постановки задачи
+\begin{equation}
+\P\en=\P\o+\P_s,
+\end{equation}
+где $\P_s$ -- потенциал скоростей рассеянной звуковой волны.
+
+Тогда из \eqref{eq_gel_for_enviroment} получаем уравнение для нахождения $\P_s:$
+\begin{equation}\label{eq__gel_for_psi_s}
+\Lap\P_s+k_s^2\P_s=0.
+\end{equation}
+
+Уравнения \eqref{eq__gel_for_psi_s} и \eqref{eq_gel_for_enviroment} запишем в цилиндрических системах координат $\r\c, \f\c, z\c$ и $\r\cyl, \f\cyl, z\cyl$ соответственно. 
+
+Отраженная волна $\P_s$ должна удовлетворять условиям излучения на бесконечности, а звуковая волна в полости цилиндра $\P\c$ -- условию ограниченности.
+
+Поэтому потенциалы $\P_s$ и $\P\c$ будем искать в виде
+\begin{align}
+&\P_s(\r\cyl, \f\cyl, z\cyl)= \exp\{i\alpha\cyl z\cyl\}\sum_{n=-\infty}^{\infty}A_nH_n(\beta\cyl \r\cyl)\exp\{in(\f\cyl-\hat\f\en)\},\\
+&\P\c(\r\c, \f\c, z\c)= \exp\{i\alpha\c z\c\}\sum_{n=-\infty}^{\infty}B_nH_n(\beta\c \r\c)\exp\{in(\f\c-\hat\f\en)\},
+\end{align}
+где $H_n(x)$ -- цилиндрическая функция Ханкеля первого рода порядка $n.$
+
+Скорости частиц жидкости и акустические давления вне и внутри цилиндра определяются по следующим формулам соответственно:
+\begin{align*}
+&\bar{\nu}\c=\grad\P\c;\:\:\:\:\:P\c=i\r\c\omega\P\c,\\
+&\bar{\nu}\en=\grad\P\en;\:\:\:\:\:P\en=i\r\en\:\omega\P\en.
+\end{align*}
+
+Распространение малых возмущений в упругом теле для установившегося режима движения частиц тела описывается скалярным и векторным уравнениями Гельмгольца:
+\begin{align}
+&\Lap\bar{\F}+k_{\popr}^2\bar{\F}=0,\\
+&\Lap\P+k\prodol^2\P=0,\label{fi_gel}
+\end{align}
+где $k_{\popr}=\omega/c_{\popr}$ и $k\prodol=\omega/c\prodol$ -- волновые числа продольных и поперечных упругих волн соответственно; $\P$ и $\bar\F$ -- скалярный и векторный потенциалы смещения соответственно; $c\prodol=\sqrt{(\lambda\cyl+2\mu\cyl)/\r\cyl}$ и $c_{\popr}=\sqrt{\mu\cyl/\r\cyl}$ -- скорости продольных и поперечных волн соответственно.
+
+При этом вектор смещения $\bar{u}$ представляется в виде:
+\begin{equation}
+\bar{u}=\grad\P+\rot\bar{\F}.
+\end{equation}
+
+Векторное уравнение \eqref{fi_gel} в цилиндрической системе координат в обшем случае не распадается на три независимых скалярных уравнения относительно проекций вектора $\bar{\F},$ а представляет собой систему трех уравнений, решение которой сопряжено со значительными математическими трудностями.
+
+Представим вектор $\F$ в виде
+$$\F=\rot(L\bar{e}_z)+\frac1{k_{\popr}}\rot\rot(M\bar{e}_z)=\rot(L\bar{e}_z)+k_{\popr} M\bar{e}_z+\frac1{k_{\popr}}\grad\biggl(\frac{\partial M}{\partial z}\biggr),$$
+где $L$ и $M$ -- скалярные функции пространственных координат $\r, \phi, z;$ $\bar{e}_z$ -- единичный вектор оси $z.$
+
+Тогда векторное уравнение \eqref{fi_gel} заменится двумя скалярными уравнениями Гельмгольца относительно функций $L$ и $M$
+\begin{align*}
+&\Lap L+k_{\popr}^2L=0,\\
+&\Lap M+k_{\popr}^2M=0.
+\end{align*}
+
+С учетом условия ограниченности функции $\P, L$ и $M$ будем искать в виде
+\begin{align}
+&\P(\r, \f, z)= \exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}C_nH_n(k_1 r)\exp\{in(\f-\hat\f)\},\\
+&L(\r, \f, z)= \exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}D_nH_n(k_2 r)\exp\{in(\f-\hat\f)\},\\
+&M(\r, \f, z)= \exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}E_nH_n(k_2 r)\exp\{in(\f-\hat\f)\},
+\end{align}
+где $k_1=\sqrt{k_{\prodol}^2-\alpha^2}, k_2=\sqrt{k_{\popr}^2-\alpha^2}.$
+
+Компоненты вектора смещения $\bar{u},$ записанные через функции $\P, L$ и $M$ в цилиндрической системе координат, имеют вид
+\begin{align}
+&u_{\r}=\frac{\partial \P}{\partial\r}+\frac{\partial^2 L}{\partial\r\partial z}+\frac{k_{\popr}}{\r}\frac{\partial M}{\partial \f},\\
+&u_\f=\frac{1}{\r}\frac{\partial \P}{\partial \f}+\frac{1}{\r}\frac{\partial^{2} L}{\partial\f\: \partial z}-k_{\popr}\frac{\partial M}{\partial \r},\\
+&u_z=\frac{\partial\P}{\partial z}-\frac{\partial^{2} L}{\partial \r^{2}}-\frac{1}{\r}\frac{\partial L}{\partial \r}-\frac{1}{\r^2}\frac{\partial^{2}L}{\partial\f^{2}}.
+\end{align}
+
+Соотношения между компонентами тензора напряжений $\sigma_{ij}$ и вектора смещения $\bar{u}$ в однородном изотропном упругом цилиндре записываются следующим образом:
+\begin{equation}
+\begin{aligned}
+&\sigma_{\r\r}=\lambda\Biggl(\frac{\partial u_{\r}}{\partial \r}+\frac{1}{\r}\biggl(\frac{\partial u_\f}{\partial\f}+u_{\r}\biggr)+\frac{\partial u_z}{\partial z}\Biggr)+2\:\mu\:\frac{\partial u_{\r}}{\partial \r},\\
+&\sigma_{\f\f}=\lambda\Biggl(\frac{\partial u_{\r}}{\partial \r}+\frac{1}{\r}\biggl(\frac{\partial u_\f}{\partial\f}+u_{\r}\biggr)+\frac{\partial u_z}{\partial z}\Biggr)+2\:\mu\:\biggl(\frac{1}{\r}\frac{\partial u_\f}{\partial\f}+\frac{u_{\r}}{\r}\biggr),\\
+&\sigma_{zz}=\lambda\Biggl(\frac{\partial u_{\r}}{\partial \r}+\frac{1}{\r}\biggl(\frac{\partial u_\f}{\partial\f}+u_{\r}\biggr)+\frac{\partial u_z}{\partial z}\Biggr)+2\:\mu\:\frac{\partial u_z}{\partial z},\\
+&\sigma_{\r\f}=\mu\Biggl(\frac{1}{\r}\frac{\partial u_{\r}}{\partial\f}+\frac{\partial u_\f}{\partial \r}-\frac{u_{\f}}{\r}\Biggr),\\
+&\sigma_{\r z}=\mu\Biggl(\frac{\partial u_z}{\partial \r}+\frac{\partial u_{\r}}{\partial z}\Biggr),\\
+&\sigma_{\f z}=\mu\Biggl(\frac{\partial u_\f}{\partial z}+\frac{1}{\r}\frac{\partial u_z}{\partial \f}\Biggr).
+\end{aligned}
+\end{equation}
+
+Уравнения движения неоднородного изотропного упругого цилиндрического слоя в случае установившихся колебаний в цилиндрической системе координат имеют вид:
+\begin{equation}
+\begin{aligned}
+\frac{\partial\sigma_{\r\r}}{
+\partial \r}+\frac{1}{\r}\frac{\partial\sigma_{\r\f}}{\partial\f}+\frac{\partial\sigma_{\r z}}{\partial z}+\frac{\sigma_{\r\r}-\sigma_{\f\f}}{\r}&=-\omega^2 p(\r)u_{\r},\\
+\frac{\partial\sigma_{\r\f}}{
+\partial \r}+\frac{1}{\r}\frac{\partial\sigma_{\f\f}}{\partial\f}+\frac{\partial\sigma_{\f z}}{\partial z}+\frac{2}{\r}\sigma_{\r\f}&=-\omega^2 p(\r)u_{\f},\\
+\frac{\partial\sigma_{\r z}}{
+\partial \r}+\frac{1}{\r}\frac{\partial\sigma_{\f z}}{\partial\f}+\frac{\partial\sigma_{zz}}{\partial z}+\frac{1}{\r}\sigma_{\r z}&=-\omega^2 p(\r)u_z,
+\end{aligned}
+\end{equation}
+где $u_{\r}, u_{\f}, u_z$ -- компоненты вектора смещения $\bar{u}$ частиц неоднородного слоя; $\sigma_{ij}$ -- компоненты тензора напряжений в неоднородном слое.
+
+Соотношения между компонентами тензора напряжений $\sigma_{ij}$ и вектора смещения $\bar{u}$ в неоднородном упругом цилиндрическом слое аналогичны соотношениям для однородного упругого цилиндра, при этом упругие постоянные $\lambda$ и $\mu$ следует заменить на функции $\lambda=\lambda(\r)$ и $\mu=\mu(\r).$
+
+Используя эти соотношения, запишем уравнения \todo{Ссылка} через компоненты вектора смещения $\mu.$ Получим
+\begin{equation}
+\begin{aligned}
+&\biggl(\lambda+2\mu\biggr)\frac{\partial^2u_{\r}}{\partial \r^2}+\biggl(\frac{\partial\lambda}{\partial \r}+2\:\frac{\partial\mu}{\partial \r}+\frac{\lambda+2\mu}{\r}\biggr)\frac{\partial u_{\r}}{\partial \r}+\frac{\mu}{\r^2}\frac{\partial^2 u_{\r}}{\partial \f^2}+\\
+&+\mu\:\frac{\partial^2 u_{\r}}{\partial z^2}+\frac{\lambda+\mu}{\r}\frac{\partial^2 u_{\f}}{\partial \r\partial\f}+\frac{1}{\r}\biggl(\frac{\partial\lambda}{\partial \r}-\frac{\lambda+3\mu}{\r}\biggr)\frac{\partial u_{\f}}{\partial\f}+\\
+&+\biggl(\lambda+\mu\biggr)\frac{\partial^2 u_z}{\partial \r\partial z}+\frac{\partial\lambda}{\partial \r}\:\frac{\partial u_z}{\partial z}+\biggl(\frac{1}{\r}\:\frac{\partial\lambda}{\partial \r}-\frac{\lambda+2\mu}{\r^2}+\om^2 p\biggr)u_{\r}=0,\\
+&\frac{\lambda+\mu}{\r}\frac{\partial^2u_{\r}}{\partial \r\partial\f}+\frac{1}{\r}\biggl(\frac{\partial\mu}{\partial \r}+\frac{\lambda+3\:\mu}{\r}\biggr)\frac{\partial u_{\r}}{\partial\f}+\mu\:\frac{\partial^2 u_{\f}}{\partial \r^2}+\frac{\lambda+2\:\mu}{\r^2}\:\frac{\partial^2 u_{\f}}{\partial \f^2}+\\
+&+\biggl(\frac{\partial\mu}{\partial \r}+\frac{\mu}{\r}\biggr)\frac{\partial u_{\f}}{\partial \r}+\mu\:\frac{\partial^2 u_{\f}}{\partial z^2}+\frac{\lambda+\mu}{\r}\frac{\partial^2 u_z}{\partial \f\partial z}+\biggl(-\frac{1}{\r}\:\frac{\partial\mu}{\partial \r}-\frac{\mu}{\r^2}+\om^2 p\biggr)u_{\f}=0,\\
+&\biggl(\lambda+\mu\biggr)\frac{\partial^2u_{\r}}{\partial \r\partial z}+\biggl(\frac{\partial\mu}{\partial \r}+\frac{\lambda+\mu}{\r}\biggr)\frac{\partial u_{\r}}{\partial z}+\frac{\lambda+\mu}{\r}\:\frac{\partial^2 u_{\f}}{\partial \f\partial z}+\mu\:\frac{\partial^2 u_z}{\partial \r^2}+\frac{\mu}{\r^2}\:\frac{\partial^2 u_z}{\partial {\f}^2}+\\
+&+\biggl(\lambda+2\:\mu\biggr)\frac{\partial^2 u_z}{\partial z^2}+\biggl(\frac{\partial\mu}{\partial \r}+\frac{\mu}{\r}\biggr)\frac{\partial u_z}{\partial \r}+\om^2 pu_z=0.
+\end{aligned}
+\end{equation}
+
+\newpage
+\section*{ЗАКЛЮЧЕНИЕ}
+\addcontentsline{toc}{section}{ЗАКЛЮЧЕНИЕ}
+Была поставлена задача о~дифракции плоских звуковых волн на~упругой сфере, имеющей произвольно расположенную полость и неоднородное покрытие. В~данной работе приведены основные уравнения колебаний, а также разложения в~ряд искомых функций для~внешней среды сферы, а также полости тела.
+\end{document}
