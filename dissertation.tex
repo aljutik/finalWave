@@ -1,5 +1,5 @@
 \input{top.tex}
-
+ 
 \renewcommand{\bibname}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
 \renewcommand\refname{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
 
@@ -128,9 +128,9 @@ $$\F=\rot(L\bar{e}_z)+\frac1{k_{\popr}}\rot\rot(M\bar{e}_z)=\rot(L\bar{e}_z)+k_{
 
 С учетом условия ограниченности функции $\P, L$ и $M$ будем искать в виде
 \begin{align}
-&\P(\r, \f, z)= \exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}C_nH_n(k_1 r)\exp\{in(\f-\hat\f)\},\\
-&L(\r, \f, z)= \exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}D_nH_n(k_2 r)\exp\{in(\f-\hat\f)\},\\
-&M(\r, \f, z)= \exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}E_nH_n(k_2 r)\exp\{in(\f-\hat\f)\},
+&\P(\r, \f, z)= \exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}C_nH_n(k_1 \r)\exp\{in(\f-\hat\f)\},\\
+&L(\r, \f, z)= \exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}D_nH_n(k_2 \r)\exp\{in(\f-\hat\f)\},\\
+&M(\r, \f, z)= \exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}E_nH_n(k_2 \r)\exp\{in(\f-\hat\f)\},
 \end{align}
 где $k_1=\sqrt{k_{\prodol}^2-\alpha^2}, k_2=\sqrt{k_{\popr}^2-\alpha^2}.$
 
@@ -180,6 +180,43 @@ $$\F=\rot(L\bar{e}_z)+\frac1{k_{\popr}}\rot\rot(M\bar{e}_z)=\rot(L\bar{e}_z)+k_{
 &+\biggl(\lambda+2\:\mu\biggr)\frac{\partial^2 u_z}{\partial z^2}+\biggl(\frac{\partial\mu}{\partial \r}+\frac{\mu}{\r}\biggr)\frac{\partial u_z}{\partial \r}+\om^2 pu_z=0.
 \end{aligned}
 \end{equation}
+
+Функции $u_\r(\r, \f, z),$ $u_\f(\r, \f, z)$ и $u_z(\r, \f, z)$ будем искать в виде
+\begin{equation}
+\begin{aligned}
+u_\r(\r, \f, z)&=\exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}u_{\r\:n}(\r)\exp\{in(\f-\hat\f)\},\\
+u_\f(\r, \f, z)&=\exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}u_{\f\:n}(\r)\exp\{in(\f-\hat\f)\},\\
+u_z(\r, \f, z)&=\exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}u_{z\:n}(\r)\exp\{in(\f-\hat\f)\}.
+\end{aligned}
+\end{equation}
+
+Коэффициенты $A_n,$ $B_n,$ $C_n,$ $D_n,$ $E_n$ разложений \todo{ССЫЛКИ!!!!} и функции $u_{\r n}(\r),$ $u_{\f n}(\r)$ и $u_{z n}(\r)$ из разложений \todo{ССЫЛКИ} подлежат определению из граничных условий.
+
+Граничные условия на внешней поверхности слоя заключаются в равенстве нормальных скоростей частиц упругой неоднородной среды и жидкости, равенстве на ней нормального напряжения и акустического давления, отсутствии касательных напряжений:
+\begin{equation}
+\begin{aligned}
+\r\cyl &=R\l: &-iwu_{\r\l}&=v_{\r\en}, &\sigma_{\r\r\l}&=-P\en, &\sigma_{\r\f\l}&=0, &\sigma_{\r z\l}&=0.
+\end{aligned}
+\end{equation}
+
+На внутренней поверхности слоя при переходе через границу раздела упругих сред должны быть непрерывны составляющие вектора смещения частиц, а также нормальные и тангенциальные напряжения:
+\begin{equation}
+\begin{aligned}
+\r\cyl&=R\cyl: &u_{\r\l}&=u_{\r\cyl}, &u_{\f\l}&=u_{\f\cyl}, &u_{z\l}&=u_{z\cyl},\\
+& &\sigma_{\r\r\l}&=\sigma_{\r\r\cyl}, &\sigma_{\r\f\l}&=\sigma_{\r\f\cyl},  &\sigma_{\r z\l}&=\sigma_{\r z\cyl}.
+\end{aligned}
+\end{equation}
+
+На границе полости $\r\c=R\c$ должны выполняться граничные условия, заключающиеся в отсутствии нормальных и тангециальных составляющих тензора напряжений
+\begin{equation}
+\begin{aligned}
+\r\c &=R\c: &-iwu_{\r\cyl}&=v_{\r\c}, &\sigma_{\r\r\cyl}&=-P\c, &\sigma_{\r\f\cyl}&=0, &\sigma_{\r z\cyl}&=0.
+\end{aligned}
+\end{equation}
+
+Используя формулы
+$$v_n=\frac{\d(\Psi_0+\Psi_s)}{\d\r}, \:\:\: P=-i(\Psi_0+\Psi_s)$$
+и выражения \todo{ССЫЛКА}, запишем граничные условия \todo{ССЫЛКА} через функции. Получим при 
 \newpage
 \subsection{Решение краевой задачи для системы обыкновенных дифференциальных уравнений}
 
