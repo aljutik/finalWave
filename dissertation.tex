@@ -91,8 +91,8 @@ $\P\en$ -- потенциал скоростей полного акустиче
 
 Поэтому потенциалы $\P_s$ и $\P\c$ будем искать в виде
 \begin{align}
-&\P_s(\r\cyl, \f\cyl, z\cyl)= \exp\{i\alpha\cyl z\cyl\}\sum_{n=-\infty}^{\infty}A_nH_n(\beta\cyl \r\cyl)\exp\{in(\f\cyl-\hat\f\en)\},\\
-&\P\c(\r\c, \f\c, z\c)= \exp\{i\alpha\c z\c\}\sum_{n=-\infty}^{\infty}B_nH_n(\beta\c \r\c)\exp\{in(\f\c-\hat\f\en)\},
+&\P_s(\r\cyl, \f\cyl, z\cyl)= \exp\{i\alpha\cyl z\cyl\}\sum_{n=-\infty}^{\infty}A_nH_n(\beta\cyl \r\cyl)\exp\{in(\f\cyl-\hat\f\en)\},\label{razloj_psi_s}\\
+&\P\c(\r\c, \f\c, z\c)= \exp\{i\alpha\c z\c\}\sum_{n=-\infty}^{\infty}B_nH_n(\beta\c \r\c)\exp\{in(\f\c-\hat\f\en)\},\label{razloj_psi_o}
 \end{align}
 где $H_n(x)$ -- цилиндрическая функция Ханкеля первого рода порядка $n.$
 
@@ -128,21 +128,21 @@ $$\F=\rot(L\bar{e}_z)+\frac1{k_{\popr}}\rot\rot(M\bar{e}_z)=\rot(L\bar{e}_z)+k_{
 
 С учетом условия ограниченности функции $\P, L$ и $M$ будем искать в виде
 \begin{align}
-&\P(\r, \f, z)= \exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}C_nH_n(k_1 \r)\exp\{in(\f-\hat\f)\},\\
-&L(\r, \f, z)= \exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}D_nH_n(k_2 \r)\exp\{in(\f-\hat\f)\},\\
-&M(\r, \f, z)= \exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}E_nH_n(k_2 \r)\exp\{in(\f-\hat\f)\},
+&\P(\r, \f, z)= \exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}C_nH_n(k_1 \r)\exp\{in(\f-\hat\f)\},\label{pazloj_psi}\\
+&L(\r, \f, z)= \exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}D_nH_n(k_2 \r)\exp\{in(\f-\hat\f)\},\label{pazloj_l}\\
+&M(\r, \f, z)= \exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}E_nH_n(k_2 \r)\exp\{in(\f-\hat\f)\},\label{pazloj_m}
 \end{align}
 где $k_1=\sqrt{k_{\prodol}^2-\alpha^2}, k_2=\sqrt{k_{\popr}^2-\alpha^2}.$
 
 Компоненты вектора смещения $\bar{u},$ записанные через функции $\P, L$ и $M$ в цилиндрической системе координат, имеют вид
-\begin{align}
+\begin{align}\label{u_cherez_L_M}
 &u_{\r}=\frac{\partial \P}{\partial\r}+\frac{\partial^2 L}{\partial\r\partial z}+\frac{k_{\popr}}{\r}\frac{\partial M}{\partial \f},\\
 &u_\f=\frac{1}{\r}\frac{\partial \P}{\partial \f}+\frac{1}{\r}\frac{\partial^{2} L}{\partial\f\: \partial z}-k_{\popr}\frac{\partial M}{\partial \r},\\
 &u_z=\frac{\partial\P}{\partial z}-\frac{\partial^{2} L}{\partial \r^{2}}-\frac{1}{\r}\frac{\partial L}{\partial \r}-\frac{1}{\r^2}\frac{\partial^{2}L}{\partial\f^{2}}.
 \end{align}
 
 Соотношения между компонентами тензора напряжений $\sigma_{ij}$ и вектора смещения $\bar{u}$ в однородном изотропном упругом цилиндре записываются следующим образом:
-\begin{equation}
+\begin{equation}\label{tenzor_napr}
 \begin{aligned}
 &\sigma_{\r\r}=\lambda\Biggl(\frac{\partial u_{\r}}{\partial \r}+\frac{1}{\r}\biggl(\frac{\partial u_\f}{\partial\f}+u_{\r}\biggr)+\frac{\partial u_z}{\partial z}\Biggr)+2\:\mu\:\frac{\partial u_{\r}}{\partial \r},\\
 &\sigma_{\f\f}=\lambda\Biggl(\frac{\partial u_{\r}}{\partial \r}+\frac{1}{\r}\biggl(\frac{\partial u_\f}{\partial\f}+u_{\r}\biggr)+\frac{\partial u_z}{\partial z}\Biggr)+2\:\mu\:\biggl(\frac{1}{\r}\frac{\partial u_\f}{\partial\f}+\frac{u_{\r}}{\r}\biggr),\\
@@ -154,7 +154,7 @@ $$\F=\rot(L\bar{e}_z)+\frac1{k_{\popr}}\rot\rot(M\bar{e}_z)=\rot(L\bar{e}_z)+k_{
 \end{equation}
 
 Уравнения движения неоднородного изотропного упругого цилиндрического слоя в случае установившихся колебаний в цилиндрической системе координат имеют вид:
-\begin{equation}
+\begin{equation}\label{equation_dvij_splosh_sred}
 \begin{aligned}
 \frac{\partial\sigma_{\r\r}}{
 \partial \r}+\frac{1}{\r}\frac{\partial\sigma_{\r\f}}{\partial\f}+\frac{\partial\sigma_{\r z}}{\partial z}+\frac{\sigma_{\r\r}-\sigma_{\f\f}}{\r}&=-\omega^2 p(\r)u_{\r},\\
@@ -168,8 +168,8 @@ $$\F=\rot(L\bar{e}_z)+\frac1{k_{\popr}}\rot\rot(M\bar{e}_z)=\rot(L\bar{e}_z)+k_{
 
 Соотношения между компонентами тензора напряжений $\sigma_{ij}$ и вектора смещения $\bar{u}$ в неоднородном упругом цилиндрическом слое аналогичны соотношениям для однородного упругого цилиндра, при этом упругие постоянные $\lambda$ и $\mu$ следует заменить на функции $\lambda=\lambda(\r)$ и $\mu=\mu(\r).$
 
-Используя эти соотношения, запишем уравнения \todo{Ссылка} через компоненты вектора смещения $\mu.$ Получим
-\begin{equation}
+Используя эти соотношения, запишем уравнения \eqref{equation_dvij_splosh_sred} через компоненты вектора смещения $\mu.$ Получим
+\begin{equation}\label{equation_otn_u}
 \begin{aligned}
 &\biggl(\lambda+2\mu\biggr)\frac{\partial^2u_{\r}}{\partial \r^2}+\biggl(\frac{\partial\lambda}{\partial \r}+2\:\frac{\partial\mu}{\partial \r}+\frac{\lambda+2\mu}{\r}\biggr)\frac{\partial u_{\r}}{\partial \r}+\frac{\mu}{\r^2}\frac{\partial^2 u_{\r}}{\partial \f^2}+\\
 &+\mu\:\frac{\partial^2 u_{\r}}{\partial z^2}+\frac{\lambda+\mu}{\r}\frac{\partial^2 u_{\f}}{\partial \r\partial\f}+\frac{1}{\r}\biggl(\frac{\partial\lambda}{\partial \r}-\frac{\lambda+3\mu}{\r}\biggr)\frac{\partial u_{\f}}{\partial\f}+\\
@@ -181,8 +181,8 @@ $$\F=\rot(L\bar{e}_z)+\frac1{k_{\popr}}\rot\rot(M\bar{e}_z)=\rot(L\bar{e}_z)+k_{
 \end{aligned}
 \end{equation}
 
-Функции $u_\r(\r, \f, z),$ $u_\f(\r, \f, z)$ и $u_z(\r, \f, z)$ будем искать в виде
-\begin{equation}
+Функции $u_\r(\r, \f, z),$ $u_\f(\r, \f, z)$ и $u_z(\r, \f, z)$ будем искать в виде разложений
+\begin{equation}\label{razloj_u}
 \begin{aligned}
 u_\r(\r, \f, z)&=\exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}u_{\r\:n}(\r)\exp\{in(\f-\hat\f)\},\\
 u_\f(\r, \f, z)&=\exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}u_{\f\:n}(\r)\exp\{in(\f-\hat\f)\},\\
@@ -190,17 +190,17 @@ u_z(\r, \f, z)&=\exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}u_{z\:n}(\r)\exp\{in(\
 \end{aligned}
 \end{equation}
 
-Коэффициенты $A_n,$ $B_n,$ $C_n,$ $D_n,$ $E_n$ разложений \todo{ССЫЛКИ!!!!} и функции $u_{\r n}(\r),$ $u_{\f n}(\r)$ и $u_{z n}(\r)$ из разложений \todo{ССЫЛКИ} подлежат определению из граничных условий.
+Коэффициенты $A_n,$ $B_n,$ $C_n,$ $D_n,$ $E_n$ разложений \eqref{razloj_psi_s}, \eqref{razloj_psi_o}, \eqref{razloj_psi_s}, \eqref{pazloj_psi}, \eqref{pazloj_l}, \eqref{pazloj_m} и функции $u_{\r n}(\r),$ $u_{\f n}(\r)$ и $u_{z n}(\r)$ из разложений \eqref{razloj_u} подлежат определению из граничных условий.
 
 Граничные условия на внешней поверхности слоя заключаются в равенстве нормальных скоростей частиц упругой неоднородной среды и жидкости, равенстве на ней нормального напряжения и акустического давления, отсутствии касательных напряжений:
-\begin{equation}
+\begin{equation}\label{vneshnaja_pover_sloja}
 \begin{aligned}
 \r\cyl &=R\l: &-iwu_{\r\l}&=v_{\r\en}, &\sigma_{\r\r\l}&=-P\en, &\sigma_{\r\f\l}&=0, &\sigma_{\r z\l}&=0.
 \end{aligned}
 \end{equation}
 
 На внутренней поверхности слоя при переходе через границу раздела упругих сред должны быть непрерывны составляющие вектора смещения частиц, а также нормальные и тангенциальные напряжения:
-\begin{equation}
+\begin{equation}\label{vnutr_pover_sloja}
 \begin{aligned}
 \r\cyl&=R\cyl: &u_{\r\l}&=u_{\r\cyl}, &u_{\f\l}&=u_{\f\cyl}, &u_{z\l}&=u_{z\cyl},\\
 & &\sigma_{\r\r\l}&=\sigma_{\r\r\cyl}, &\sigma_{\r\f\l}&=\sigma_{\r\f\cyl},  &\sigma_{\r z\l}&=\sigma_{\r z\cyl}.
@@ -208,15 +208,25 @@ u_z(\r, \f, z)&=\exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}u_{z\:n}(\r)\exp\{in(\
 \end{equation}
 
 На границе полости $\r\c=R\c$ должны выполняться граничные условия, заключающиеся в отсутствии нормальных и тангециальных составляющих тензора напряжений
-\begin{equation}
+\begin{equation}\label{gran_pol}
 \begin{aligned}
 \r\c &=R\c: &-iwu_{\r\cyl}&=v_{\r\c}, &\sigma_{\r\r\cyl}&=-P\c, &\sigma_{\r\f\cyl}&=0, &\sigma_{\r z\cyl}&=0.
 \end{aligned}
 \end{equation}
 
 Используя формулы
-$$v_n=\frac{\d(\Psi_0+\Psi_s)}{\d\r}, \:\:\: P=-i(\Psi_0+\Psi_s)$$
-и выражения \todo{ССЫЛКА}, запишем граничные условия \todo{ССЫЛКА} через функции. Получим при 
+$$v_{\r\en}=\frac{\de(\Psi_{o}+\Psi_s)}{\de\r},\:\:\: P\en=iwp\en(\Psi_{o}+\Psi_s)$$
+и выражение \eqref{tenzor_napr} запишем граничные условия \eqref{vneshnaja_pover_sloja} через функции $\Psi_s,$ $u_\r,$ $u_\f,$ $u_z$. Получим при $\r\cyl=R\l$
+\begin{align}
+&\frac{\de(\Psi_{o}+\Psi_s)}{\de\r}=-iwu_{\r\l},\\
+&\lambda\Biggl(\frac{\partial u_{\r}}{\partial \r}+\frac{1}{\r}\biggl(\frac{\partial u_\f}{\partial\f}+u_{\r}\biggr)+\frac{\partial u_z}{\partial z}\Biggr)+2\:\mu\:\frac{\partial u_{\r}}{\partial \r}=-iwp\en(\Psi_{o}+\Psi_s),\\
+&\lambda\Biggl(\frac{\partial u_{\r}}{\partial \r}+\frac{1}{\r}\biggl(\frac{\partial u_\f}\mu\Biggl(\frac{1}{\r}\frac{\partial u_{\r}}{\partial\f}+\frac{\partial u_\f}{\partial \r}-\frac{u_{\f}}{\r}\Biggr)=0,\\
+&\mu\Biggl(\frac{\partial u_z}{\partial \r}+\frac{\partial u_{\r}}{\partial z}\Biggr)=0.
+\end{align}
+
+Аналогично, используя выражения \eqref{u_cherez_L_M}, \eqref{tenzor_napr} запишем граничные условия \eqref{vnutr_pover_sloja} через функции $u_\r,$ $u_\f,$ $u_z,$ $ \P\cyl,$ $L$ и $M ,$ а граничные условия \eqref{vnutr_pover_sloja} через $\P\cyl,$ $L$ и $M.$
+
+Подставив разложения \eqref{razloj_u} в уравнения \eqref{equation_otn_u}, воспользовавшись уравнением для присоединенных многочленов Лежандра и свойством ортогональности этих многочленов, получим для каждого индекса $n \q(n = 0,1,\ldots;$ систему линейных однородных обыкновенных дифференциальных уравнений второго порядка относительно неизвестных функций $u_{\r\:n}(\r\cyl),$ $u_{\f\:n}(\r\cyl)$ и $u_{z\:n}(\r\cyl).$ А подставив разложения \eqref{razloj_u} в полученные граничные условия, найдем краевые условия и сможем решить  систему дифференциальных уравнений. После ее решения определим коэффициенты $A_n,$ $B_n,$ $C_n,$ $D_n,$ $E_n$ разложений  \eqref{razloj_psi_s}, \eqref{razloj_psi_o}, \eqref{razloj_psi_s}, \eqref{pazloj_psi}, \eqref{pazloj_l}, \eqref{pazloj_m} для каждой индекса $n,$ а зная коэффициенты ${A}_{n}$, по формуле \eqref{razloj_psi_s} найдем акустическое поле, рассеяное упругим цилиндром, имеющим произвольно расположенную полость и неоднородное покрытие.
 \newpage
 \subsection{Решение краевой задачи для системы обыкновенных дифференциальных уравнений}
 
