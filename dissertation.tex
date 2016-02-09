@@ -66,12 +66,12 @@ $$\P\o=A\o\exp\{ik\en[r\o\sin{\hat{\theta}\en}\cos(\f\en-\hat{\f}\en)+z\cos\hat{
 $$\P\o(\r\cyl, \f\cyl, z\cyl)=A_0\exp\{i\alpha\cyl z\cyl\}\sum_{n=-\infty}^{\infty}i^nJ_n(\beta\cyl \r\cyl)\exp\{in(\f\cyl-\hat\f\cyl)\},$$
 где $J_n(x)$ -- цилиндрическая функция Бесселя порядка $n;$ $\alpha\cyl=k\cyl\cos\hat\theta\en;$ \\$\beta\cyl=k\cyl\sin\hat\theta\en.$
 
-В установившемся режиме колебаний задача определения акустических полей вне цилиндра и внутри его полости заключается в нахожждении решений уравнения Гельмгольца
+В установившемся режиме колебаний задача определения акустических полей вне цилиндра и внутри его полости заключается в нахождении решений уравнений Гельмгольца
 \begin{align}
 &\Lap\P\c+k\c^2\P\c=0,\\
 &\Lap\P\en+k\en^2\P\en=0\label{eq_gel_for_enviroment},
 \end{align}
-где $\P\c$ -- потенциал скоростей акустического поля в полости цилиндра;\\ $k\c=\frac{\omega}{c\c}$ -- волновое число жидкочти в полости цилиндра;
+где $\P\c$ -- потенциал скоростей акустического поля в полости цилиндра;\\ $k\c=\frac{\omega}{c\c}$ -- волновое число жидкости в полости цилиндра;
 $\P\en$ -- потенциал скоростей полного акустического поля во внешней среде. 
 
 В силу линейной постановки задачи
@@ -118,7 +118,9 @@ $\P\en$ -- потенциал скоростей полного акустиче
 
 Представим вектор $\F$ в виде
 $$\F=\rot(L\bar{e}_z)+\frac1{k_{\popr}}\rot\rot(M\bar{e}_z)=\rot(L\bar{e}_z)+k_{\popr} M\bar{e}_z+\frac1{k_{\popr}}\grad\biggl(\frac{\partial M}{\partial z}\biggr),$$
-где $L$ и $M$ -- скалярные функции пространственных координат $\r, \phi, z;$ $\bar{e}_z$ -- единичный вектор оси $z.$
+где $L$ и $M$ -- скалярные функции пространственных координат $\r\cyl, \varphi\cyl, z\cyl;$
+\newline
+$\bar{e}_z$ -- единичный вектор оси $z\cyl.$
 
 Тогда векторное уравнение \eqref{fi_gel} заменится двумя скалярными уравнениями Гельмгольца относительно функций $L$ и $M$
 \begin{align*}
@@ -128,28 +130,28 @@ $$\F=\rot(L\bar{e}_z)+\frac1{k_{\popr}}\rot\rot(M\bar{e}_z)=\rot(L\bar{e}_z)+k_{
 
 С учетом условия ограниченности функции $\P, L$ и $M$ будем искать в виде
 \begin{align}
-&\P(\r, \f, z)= \exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}C_nH_n(k_1 \r)\exp\{in(\f-\hat\f)\},\label{pazloj_psi}\\
-&L(\r, \f, z)= \exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}D_nH_n(k_2 \r)\exp\{in(\f-\hat\f)\},\label{pazloj_l}\\
-&M(\r, \f, z)= \exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}E_nH_n(k_2 \r)\exp\{in(\f-\hat\f)\},\label{pazloj_m}
+&\P(\r\cyl, \f\cyl, z\cyl)= \exp\{i\alpha\cyl z\cyl\}\sum_{n=-\infty}^{\infty}C_nH_n(k_1 \r\cyl)\exp\{in(\f\cyl-\hat\f\cyl)\},\label{pazloj_psi}\\
+&L(\r\cyl, \f\cyl, z\cyl)= \exp\{i\alpha\cyl z\cyl\}\sum_{n=-\infty}^{\infty}D_nH_n(k_2 \r\cyl)\exp\{in(\f\cyl-\hat\f\cyl)\},\label{pazloj_l}\\
+&M(\r\cyl, \f\cyl, z\cyl)= \exp\{i\alpha\cyl z\cyl\}\sum_{n=-\infty}^{\infty}E_nH_n(k_2 \r\cyl)\exp\{in(\f\cyl-\hat\f\cyl)\},\label{pazloj_m}
 \end{align}
-где $k_1=\sqrt{k_{\prodol}^2-\alpha^2}, k_2=\sqrt{k_{\popr}^2-\alpha^2}.$
+где $k_1=\sqrt{k_{\prodol}^2-\alpha^2\cyl}, k_2=\sqrt{k_{\popr}^2-\alpha^2\cyl}.$
 
 Компоненты вектора смещения $\bar{u},$ записанные через функции $\P, L$ и $M$ в цилиндрической системе координат, имеют вид
 \begin{align}\label{u_cherez_L_M}
-&u_{\r}=\frac{\partial \P}{\partial\r}+\frac{\partial^2 L}{\partial\r\partial z}+\frac{k_{\popr}}{\r}\frac{\partial M}{\partial \f},\\
-&u_\f=\frac{1}{\r}\frac{\partial \P}{\partial \f}+\frac{1}{\r}\frac{\partial^{2} L}{\partial\f\: \partial z}-k_{\popr}\frac{\partial M}{\partial \r},\\
-&u_z=\frac{\partial\P}{\partial z}-\frac{\partial^{2} L}{\partial \r^{2}}-\frac{1}{\r}\frac{\partial L}{\partial \r}-\frac{1}{\r^2}\frac{\partial^{2}L}{\partial\f^{2}}.
+&u_{\r\cyl}=\frac{\partial \P}{\partial\r\cyl}+\frac{\partial^2 L}{\partial\r\cyl\:\partial z\cyl}+\frac{k_{\popr}}{\r}\frac{\partial M}{\partial \f\cyl},\\
+&u_{\f\cyl}=\frac{1}{\r\cyl}\frac{\partial \P}{\partial \f\cyl}+\frac{1}{\r\cyl}\frac{\partial^{2} L}{\partial\f\cyl\: \partial z\cyl}-k_{\popr}\frac{\partial M}{\partial \r\cyl},\\
+&u_{z\cyl}=\frac{\partial\P}{\partial z\cyl}-\frac{\partial^{2} L}{\partial \r^2\cyl}-\frac{1}{\r\cyl}\frac{\partial L}{\partial \r\cyl}-\frac{1}{\r^2\cyl}\frac{\partial^2L}{\partial\f^2\cyl}.
 \end{align}
 
 Соотношения между компонентами тензора напряжений $\sigma_{ij}$ и вектора смещения $\bar{u}$ в однородном изотропном упругом цилиндре записываются следующим образом:
 \begin{equation}\label{tenzor_napr}
 \begin{aligned}
-&\sigma_{\r\r}=\lambda\Biggl(\frac{\partial u_{\r}}{\partial \r}+\frac{1}{\r}\biggl(\frac{\partial u_\f}{\partial\f}+u_{\r}\biggr)+\frac{\partial u_z}{\partial z}\Biggr)+2\:\mu\:\frac{\partial u_{\r}}{\partial \r},\\
-&\sigma_{\f\f}=\lambda\Biggl(\frac{\partial u_{\r}}{\partial \r}+\frac{1}{\r}\biggl(\frac{\partial u_\f}{\partial\f}+u_{\r}\biggr)+\frac{\partial u_z}{\partial z}\Biggr)+2\:\mu\:\biggl(\frac{1}{\r}\frac{\partial u_\f}{\partial\f}+\frac{u_{\r}}{\r}\biggr),\\
-&\sigma_{zz}=\lambda\Biggl(\frac{\partial u_{\r}}{\partial \r}+\frac{1}{\r}\biggl(\frac{\partial u_\f}{\partial\f}+u_{\r}\biggr)+\frac{\partial u_z}{\partial z}\Biggr)+2\:\mu\:\frac{\partial u_z}{\partial z},\\
-&\sigma_{\r\f}=\mu\Biggl(\frac{1}{\r}\frac{\partial u_{\r}}{\partial\f}+\frac{\partial u_\f}{\partial \r}-\frac{u_{\f}}{\r}\Biggr),\\
-&\sigma_{\r z}=\mu\Biggl(\frac{\partial u_z}{\partial \r}+\frac{\partial u_{\r}}{\partial z}\Biggr),\\
-&\sigma_{\f z}=\mu\Biggl(\frac{\partial u_\f}{\partial z}+\frac{1}{\r}\frac{\partial u_z}{\partial \f}\Biggr).
+&\sigma_{\r\cyl\r\cyl}=\lambda\Biggl(\frac{\partial u_{\r\cyl}}{\partial \r\cyl}+\frac{1}{\r\cyl}\biggl(\frac{\partial u_{\f\cyl}}{\partial\f\cyl}+u_{\r\cyl}\biggr)+\frac{\partial u_{z\cyl}}{\partial z\cyl}\Biggr)+2\:\mu\:\frac{\partial u_{\r\cyl}}{\partial \r\cyl},\\
+&\sigma_{\f\cyl\f\cyl}=\lambda\Biggl(\frac{\partial u_{\r\cyl}}{\partial \r\cyl}+\frac{1}{\r\cyl}\biggl(\frac{\partial u_{\f\cyl}}{\partial\f\cyl}+u_{\r\cyl}\biggr)+\frac{\partial u_{z\cyl}}{\partial z\cyl}\Biggr)+2\:\mu\:\biggl(\frac{1}{\r\cyl}\frac{\partial u_{\f\cyl}}{\partial\f\cyl}+\frac{u_{\r\cyl}}{\r\cyl}\biggr),\\
+&\sigma_{z\cyl z\cyl}=\lambda\Biggl(\frac{\partial u_{\r\cyl}}{\partial \r\cyl}+\frac{1}{\r\cyl}\biggl(\frac{\partial u_{\f\cyl}}{\partial\f\cyl}+u_{\r\cyl}\biggr)+\frac{\partial u_{z\cyl}}{\partial z\cyl}\Biggr)+2\:\mu\:\frac{\partial u_{z\cyl}}{\partial z\cyl},\\
+&\sigma_{\r\cyl\f\cyl}=\mu\Biggl(\frac{1}{\r\cyl}\frac{\partial u_{\r\cyl}}{\partial\f\cyl}+\frac{\partial u_{\f\cyl}}{\partial \r\cyl}-\frac{u_{\f\cyl}}{\r\cyl}\Biggr),\\
+&\sigma_{\r\cyl z\cyl}=\mu\Biggl(\frac{\partial u_{z\cyl}}{\partial \r\cyl}+\frac{\partial u_{\r\cyl}}{\partial z\cyl}\Biggr),\\
+&\sigma_{\f\cyl z\cyl}=\mu\Biggl(\frac{\partial u_{\f\cyl}}{\partial z\cyl}+\frac{1}{\r\cyl}\frac{\partial u_{z\cyl}}{\partial \f\cyl}\Biggr).
 \end{aligned}
 \end{equation}
 
