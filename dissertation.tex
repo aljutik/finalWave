@@ -187,16 +187,17 @@ $\sigma_{ij}$ -- компоненты тензора напряжений в н�
 \end{aligned}
 \end{equation}
 
-Функции $u_\r(\r, \f, z),$ $u_\f(\r, \f, z)$ и $u_z(\r, \f, z)$ будем искать в виде разложений
+\newpage
+Функции $u_{\r\cyl}(\r\cyl, \f\cyl, z\cyl),$ $u_{\f\cyl}(\r\cyl, \f\cyl, z\cyl)$ и $u_{z\cyl}(\r\cyl, \f\cyl, z\cyl)$ будем искать в виде разложений
 \begin{equation}\label{razloj_u}
 \begin{aligned}
-u_\r(\r, \f, z)&=\exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}u_{\r\:n}(\r)\exp\{in(\f-\hat\f)\},\\
-u_\f(\r, \f, z)&=\exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}u_{\f\:n}(\r)\exp\{in(\f-\hat\f)\},\\
-u_z(\r, \f, z)&=\exp\{i\alpha z\}\sum_{n=-\infty}^{\infty}u_{z\:n}(\r)\exp\{in(\f-\hat\f)\}.
+u_{\r\cyl}(\r\cyl, \f\cyl, z\cyl)&=\exp\{i\alpha\cyl z\cyl\}\sum_{n=-\infty}^{\infty}u_{\r\cyl\:n}(\r\cyl)\exp\{in(\f\cyl-\hat\f\cyl)\},\\
+u_{\f\cyl}(\r\cyl, \f\cyl, z\cyl)&=\exp\{i\alpha\cyl z\cyl\}\sum_{n=-\infty}^{\infty}u_{\f\cyl\:n}(\r\cyl)\exp\{in(\f\cyl-\hat\f\cyl)\},\\
+u_{z\cyl}(\r\cyl, \f\cyl, z\cyl)&=\exp\{i\alpha\cyl z\cyl\}\sum_{n=-\infty}^{\infty}u_{z\cyl\:n}(\r\cyl)\exp\{in(\f\cyl-\hat\f\cyl)\}.
 \end{aligned}
 \end{equation}
 
-Коэффициенты $A_n,$ $B_n,$ $C_n,$ $D_n,$ $E_n$ разложений \eqref{razloj_psi_s}, \eqref{razloj_psi_o}, \eqref{razloj_psi_s}, \eqref{pazloj_psi}, \eqref{pazloj_l}, \eqref{pazloj_m} и функции $u_{\r n}(\r),$ $u_{\f n}(\r)$ и $u_{z n}(\r)$ из разложений \eqref{razloj_u} подлежат определению из граничных условий.
+Коэффициенты $A_n,$ $B_n,$ $C_n,$ $D_n,$ $E_n$ разложений \eqref{razloj_psi_s}, \eqref{razloj_psi_o}, \eqref{razloj_psi_s}, \eqref{pazloj_psi}, \eqref{pazloj_l}, \eqref{pazloj_m} и функции $u_{\r\cyl n}(\r\cyl),$ $u_{\f\cyl n}(\r\cyl)$ и $u_{z\cyl n}(\r\cyl)$ из разложений \eqref{razloj_u} подлежат определению из граничных условий.
 
 Граничные условия на внешней поверхности слоя заключаются в равенстве нормальных скоростей частиц упругой неоднородной среды и жидкости, равенстве на ней нормального напряжения и акустического давления, отсутствии касательных напряжений:
 \begin{equation}\label{vneshnaja_pover_sloja}
