@@ -68,7 +68,7 @@ $$\P\o(\r\cyl, \f\cyl, z\cyl)=A_0\exp\{i\alpha  z\cyl\}\sum_{n=-\infty}^{\infty}
 
 В установившемся режиме колебаний задача определения акустических полей вне цилиндра и внутри его полости заключается в нахождении решений уравнений Гельмгольца
 \begin{align}
-&\Lap\P\c+k\c^2\P\c=0,\\
+&\Lap\P\c+k\c^2\P\c=0\label{eq_gel_for_polost},\\
 &\Lap\P\en+k\en^2\P\en=0\label{eq_gel_for_enviroment},
 \end{align}
 где $\P\c$ -- потенциал скоростей акустического поля в полости цилиндра;\\ $k\c=\frac{\omega}{c\c}$ -- волновое число жидкости в полости цилиндра;
@@ -82,17 +82,17 @@ $\P\en$ -- потенциал скоростей полного акустиче
 
 Тогда из \eqref{eq_gel_for_enviroment} получаем уравнение для нахождения $\P_s:$
 \begin{equation}\label{eq__gel_for_psi_s}
-\Lap\P_s+k_s^2\P_s=0.
+\Lap\P_s+k\en^2\P_s=0.
 \end{equation}
 
-Уравнения \eqref{eq__gel_for_psi_s} и \eqref{eq_gel_for_enviroment} запишем в цилиндрических системах координат $\r\c, \f\c, z\c$ и $\r\cyl, \f\cyl, z\cyl$ соответственно. 
+Уравнения \eqref{eq_gel_for_polost} и \eqref{eq__gel_for_psi_s} запишем в цилиндрических системах координат $\r\c, \f\c, z\c$ и $\r\cyl, \f\cyl, z\cyl$ соответственно. 
 
 Отраженная волна $\P_s$ должна удовлетворять условиям излучения на бесконечности, а звуковая волна в полости цилиндра $\P\c$ -- условию ограниченности.
 
 Поэтому потенциалы $\P_s$ и $\P\c$ будем искать в виде
 \begin{align}
-&\P_s(\r\cyl, \f\cyl, z\cyl)= \exp\{i\alpha\cyl z\cyl\}\sum_{n=-\infty}^{\infty}A_nH_n(\beta\cyl \r\cyl)\exp\{in(\f\cyl-\hat\f\en)\},\label{razloj_psi_s}\\
-&\P\c(\r\c, \f\c, z\c)= \exp\{i\alpha\c z\c\}\sum_{n=-\infty}^{\infty}B_nH_n(\beta\c \r\c)\exp\{in(\f\c-\hat\f\en)\},\label{razloj_psi_o}
+&\P_s(\r\cyl, \f\cyl, z\cyl)= \exp\{i\alpha z\cyl\}\sum_{n=-\infty}^{\infty}A_nH_n(\beta \r\cyl)\exp\{in(\f\cyl-\hat\f\en)\},\label{razloj_psi_s}\\
+&\P\c(\r\c, \f\c, z\c)= \exp\{i\alpha z\c\}\sum_{n=-\infty}^{\infty}B_nH_n(\beta \r\c)\exp\{in(\f\c-\hat\f\en)\},\label{razloj_psi_o}
 \end{align}
 где $H_n(x)$ -- цилиндрическая функция Ханкеля первого рода порядка $n.$
 
@@ -130,9 +130,9 @@ $\bar{e}_{z\cyl}$ -- единичный вектор оси $z\cyl.$
 
 С учетом условия ограниченности функции $\P, L$ и $M$ будем искать в виде
 \begin{align}
-&\P(\r\cyl, \f\cyl, z\cyl)= \exp\{i\alpha\cyl z\cyl\}\sum_{n=-\infty}^{\infty}C_nH_n(k_1 \r\cyl)\exp\{in(\f\cyl-\hat\f\cyl)\},\label{pazloj_psi}\\
-&L(\r\cyl, \f\cyl, z\cyl)= \exp\{i\alpha\cyl z\cyl\}\sum_{n=-\infty}^{\infty}D_nH_n(k_2 \r\cyl)\exp\{in(\f\cyl-\hat\f\cyl)\},\label{pazloj_l}\\
-&M(\r\cyl, \f\cyl, z\cyl)= \exp\{i\alpha\cyl z\cyl\}\sum_{n=-\infty}^{\infty}E_nH_n(k_2 \r\cyl)\exp\{in(\f\cyl-\hat\f\cyl)\},\label{pazloj_m}
+&\P(\r\cyl, \f\cyl, z\cyl)= \exp\{i\alpha z\cyl\}\sum_{n=-\infty}^{\infty}C_nH_n(k_1 \r\cyl)\exp\{in(\f\cyl-\hat\f\cyl)\},\label{pazloj_psi}\\
+&L(\r\cyl, \f\cyl, z\cyl)= \exp\{i\alpha z\cyl\}\sum_{n=-\infty}^{\infty}D_nH_n(k_2 \r\cyl)\exp\{in(\f\cyl-\hat\f\cyl)\},\label{pazloj_l}\\
+&M(\r\cyl, \f\cyl, z\cyl)= \exp\{i\alpha z\cyl\}\sum_{n=-\infty}^{\infty}E_nH_n(k_2 \r\cyl)\exp\{in(\f\cyl-\hat\f\cyl)\},\label{pazloj_m}
 \end{align}
 где $k_1=\sqrt{k_{\prodol}^2-\alpha^2\cyl}, k_2=\sqrt{k_{\popr}^2-\alpha^2\cyl}.$
 
