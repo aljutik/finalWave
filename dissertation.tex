@@ -63,8 +63,8 @@ $$\P\o=A\o\exp\{ik\en[\r\cyl\sin{\hat{\theta}\en}\cos(\f\cyl-\hat{\f}\en)+z\cyl\
 \subsection{Аналитическое решение задачи}
 
 Потенциал скоростей падающей плоской волны представим в виде
-$$\P\o(\r\cyl, \f\cyl, z\cyl)=A_0\exp\{i\alpha  z\cyl\}\sum_{n=-\infty}^{\infty}i^nJ_n(\beta  \r\cyl)\exp\{in(\f\cyl-\hat\f\en)\},$$
-где $J_n(x)$ -- цилиндрическая функция Бесселя порядка $n;$ $\alpha=k\en\cos\hat\theta\en;$ \\$\beta=k\en\sin\hat\theta\en.$
+$$\P\o(\r\cyl, \f\cyl, z\cyl)=A_0\exp\{i\alpha  z\cyl\}\sum_{n=-\infty}^{\infty}i^nJ_n(\beta\en  \r\cyl)\exp\{in(\f\cyl-\hat\f\en)\},$$
+где $J_n(x)$ -- цилиндрическая функция Бесселя порядка $n;$ $\alpha=k\en\cos\hat\theta\en;$ \\$\beta\en=\sqrt{k_{\en}^2-\alpha^2}.$
 
 В установившемся режиме колебаний задача определения акустических полей вне цилиндра и внутри его полости заключается в нахождении решений уравнений Гельмгольца
 \begin{align}
@@ -90,9 +90,10 @@ $\P\en$ -- потенциал скоростей полного акустиче
 Отраженная волна $\P_s$ должна удовлетворять условиям излучения на бесконечности, а звуковая волна в полости цилиндра $\P\c$ -- условию ограниченности.
 
 Поэтому потенциалы $\P_s$ и $\P\c$ будем искать в виде
+\todo{Беты одинаковые или разные (станет ясно в граничных условиях)}
 \begin{align}
-&\P_s(\r\cyl, \f\cyl, z\cyl)= \exp\{i\alpha z\cyl\}\sum_{n=-\infty}^{\infty}A_nH_n(\beta \r\cyl)\exp\{in(\f\cyl-\hat\f\en)\},\label{razloj_psi_s}\\
-&\P\c(\r\c, \f\c, z\c)= \exp\{i\alpha z\c\}\sum_{n=-\infty}^{\infty}B_nH_n(\beta \r\c)\exp\{in(\f\c-\hat\f\en)\},\label{razloj_psi_o}
+&\P_s(\r\cyl, \f\cyl, z\cyl)= \exp\{i\alpha z\cyl\}\sum_{n=-\infty}^{\infty}A_nH_n(\beta\cyl \r\cyl)\exp\{in\f\cyl\},\label{razloj_psi_s}\\
+&\P\c(\r\c, \f\c, z\c)= \exp\{i\alpha z\c\}\sum_{n=-\infty}^{\infty}B_nH_n(\beta\c \r\c)\exp\{in\f\c\},\label{razloj_psi_o}
 \end{align}
 где $H_n(x)$ -- цилиндрическая функция Ханкеля первого рода порядка $n.$
 
@@ -104,20 +105,20 @@ $\P\en$ -- потенциал скоростей полного акустиче
 
 Распространение малых возмущений в упругом теле для установившегося режима движения частиц тела описывается скалярным и векторным уравнениями Гельмгольца:
 \begin{align}
-&\Lap\bar{\F}+k_{\popr}^2\bar{\F}=0,\\
-&\Lap\P+k\prodol^2\P=0,\label{fi_gel}
+&\Lap\bar{\F}\cyl+k_{\popr}^2\bar{\F}\cyl=0,\\
+&\Lap\P\cyl+k\prodol^2\P\cyl=0,\label{fi_gel}
 \end{align}
-где $k_{\popr}=\omega/c_{\popr}$ и $k\prodol=\omega/c\prodol$ -- волновые числа продольных и поперечных упругих волн соответственно; $\P$ и $\bar\F$ -- скалярный и векторный потенциалы смещения соответственно; $c\prodol=\sqrt{(\lambda\cyl+2\mu\cyl)/\r\cyl}$ и $c_{\popr}=\sqrt{\mu\cyl/\r\cyl}$ -- скорости продольных и поперечных волн соответственно.
+где $k_{\popr}=\omega/c_{\popr}$ и $k\prodol=\omega/c\prodol$ -- волновые числа продольных и поперечных упругих волн соответственно; $\P\cyl$ и $\bar\F\cyl$ -- скалярный и векторный потенциалы смещения соответственно; $c\prodol=\sqrt{(\lambda\cyl+2\mu\cyl)/\r\cyl}$ и $c_{\popr}=\sqrt{\mu\cyl/\r\cyl}$ -- скорости продольных и поперечных волн соответственно.
 
-При этом вектор смещения $\bar{u}$ представляется в виде:
+При этом вектор смещения $\bar{u}\cyl$ представляется в виде:
 \begin{equation}
-\bar{u}=\grad\P+\rot\bar{\F}.
+\bar{u}\cyl=\grad\P\cyl+\rot\bar{\F}\cyl.
 \end{equation}
 
-Векторное уравнение \eqref{fi_gel} в цилиндрической системе координат в обшем случае не распадается на три независимых скалярных уравнения относительно проекций вектора $\bar{\F},$ а представляет собой систему трех уравнений, решение которой сопряжено со значительными математическими трудностями.
+Векторное уравнение \eqref{fi_gel} в цилиндрической системе координат в обшем случае не распадается на три независимых скалярных уравнения относительно проекций вектора $\bar{\F}\cyl,$ а представляет собой систему трех уравнений, решение которой сопряжено со значительными математическими трудностями.
 
-Представим вектор $\bar\F$ в виде
-$$\bar\F=\rot(L\bar{e}_{z\cyl})+\frac1{k_{\popr}}\rot\rot(M\bar{e}_{z\cyl})=\rot(L\bar{e}_{z\cyl})+k_{\popr} M\bar{e}_{z\cyl}+\frac1{k_{\popr}}\grad\biggl(\frac{\partial M}{\partial z\cyl}\biggr),$$
+Представим вектор $\bar\F\cyl$ в виде
+$$\bar\F\cyl=\rot(L\bar{e}_{z\cyl})+\frac1{k_{\popr}}\rot\rot(M\bar{e}_{z\cyl})=\rot(L\bar{e}_{z\cyl})+k_{\popr} M\bar{e}_{z\cyl}+\frac1{k_{\popr}}\grad\biggl(\frac{\partial M}{\partial z\cyl}\biggr),$$
 где $L$ и $M$ -- скалярные функции пространственных координат $\r\cyl, \varphi\cyl, z\cyl;$
 \newline
 $\bar{e}_{z\cyl}$ -- единичный вектор оси $z\cyl.$
@@ -130,13 +131,13 @@ $\bar{e}_{z\cyl}$ -- единичный вектор оси $z\cyl.$
 
 С учетом условия ограниченности функции $\P, L$ и $M$ будем искать в виде
 \begin{align}
-&\P(\r\cyl, \f\cyl, z\cyl)= \exp\{i\alpha z\cyl\}\sum_{n=-\infty}^{\infty}C_nH_n(k_1 \r\cyl)\exp\{in(\f\cyl-\hat\f\cyl)\},\label{pazloj_psi}\\
-&L(\r\cyl, \f\cyl, z\cyl)= \exp\{i\alpha z\cyl\}\sum_{n=-\infty}^{\infty}D_nH_n(k_2 \r\cyl)\exp\{in(\f\cyl-\hat\f\cyl)\},\label{pazloj_l}\\
-&M(\r\cyl, \f\cyl, z\cyl)= \exp\{i\alpha z\cyl\}\sum_{n=-\infty}^{\infty}E_nH_n(k_2 \r\cyl)\exp\{in(\f\cyl-\hat\f\cyl)\},\label{pazloj_m}
+&\P\cyl(\r\cyl, \f\cyl, z\cyl)= \exp\{i\alpha z\cyl\}\sum_{n=-\infty}^{\infty}C_nH_n(\beta_{\prodol} \r\cyl)\exp\{in\f\cyl\},\label{pazloj_psi}\\
+&L(\r\cyl, \f\cyl, z\cyl)= \exp\{i\alpha z\cyl\}\sum_{n=-\infty}^{\infty}D_nH_n(\beta_{\popr} \r\cyl)\exp\{in\f\cyl\},\label{pazloj_l}\\
+&M(\r\cyl, \f\cyl, z\cyl)= \exp\{i\alpha z\cyl\}\sum_{n=-\infty}^{\infty}E_nH_n(\beta_{\popr} \r\cyl)\exp\{in\f\cyl\},\label{pazloj_m}
 \end{align}
-где $k_1=\sqrt{k_{\prodol}^2-\alpha^2\cyl}, k_2=\sqrt{k_{\popr}^2-\alpha^2\cyl}.$
+где $\beta_{\prodol}=\sqrt{k_{\prodol}^2-\alpha^2}, \beta_{\popr}=\sqrt{k_{\popr}^2-\alpha^2}.$
 
-Компоненты вектора смещения $\bar{u},$ записанные через функции $\P, L$ и $M$ в цилиндрической системе координат, имеют вид
+Компоненты вектора смещения $\bar{u}\cyl,$ записанные через функции $\P, L$ и $M$ в цилиндрической системе координат, имеют вид
 \begin{align}\label{u_cherez_L_M}
 &u_{\r\cyl}=\frac{\partial \P}{\partial\r\cyl}+\frac{\partial^2 L}{\partial\r\cyl\:\partial z\cyl}+\frac{k_{\popr}}{\r}\frac{\partial M}{\partial \f\cyl},\\
 &u_{\f\cyl}=\frac{1}{\r\cyl}\frac{\partial \P}{\partial \f\cyl}+\frac{1}{\r\cyl}\frac{\partial^{2} L}{\partial\f\cyl\: \partial z\cyl}-k_{\popr}\frac{\partial M}{\partial \r\cyl},\\
