@@ -137,22 +137,22 @@ $\bar{e}_{z\cyl}$ -- единичный вектор оси $z\cyl.$
 \end{align}
 где $\beta_{\prodol}=\sqrt{k_{\prodol}^2-\alpha^2}, \beta_{\popr}=\sqrt{k_{\popr}^2-\alpha^2}.$
 
-Компоненты вектора смещения $\bar{u}\cyl,$ записанные через функции $\P, L$ и $M$ в цилиндрической системе координат, имеют вид
+Компоненты вектора смещения $\bar{u}\cyl,$ записанные через функции $\P\cyl, L$ и $M$ в цилиндрической системе координат, имеют вид
 \begin{align}\label{u_cherez_L_M}
-&u_{\r\cyl}=\frac{\partial \P}{\partial\r\cyl}+\frac{\partial^2 L}{\partial\r\cyl\:\partial z\cyl}+\frac{k_{\popr}}{\r}\frac{\partial M}{\partial \f\cyl},\\
-&u_{\f\cyl}=\frac{1}{\r\cyl}\frac{\partial \P}{\partial \f\cyl}+\frac{1}{\r\cyl}\frac{\partial^{2} L}{\partial\f\cyl\: \partial z\cyl}-k_{\popr}\frac{\partial M}{\partial \r\cyl},\\
-&u_{z\cyl}=\frac{\partial\P}{\partial z\cyl}-\frac{\partial^{2} L}{\partial \r^2\cyl}-\frac{1}{\r\cyl}\frac{\partial L}{\partial \r\cyl}-\frac{1}{\r^2\cyl}\frac{\partial^2L}{\partial\f^2\cyl}.
+&{u\cyl}_\r=\frac{\partial \P\cyl}{\partial\r\cyl}+\frac{\partial^2 L}{\partial\r\cyl\:\partial z\cyl}+\frac{k_{\popr}}{\r\cyl}\frac{\partial M}{\partial \f\cyl},\\
+&{u\cyl}_\f=\frac{1}{\r\cyl}\frac{\partial \P\cyl}{\partial \f\cyl}+\frac{1}{\r\cyl}\frac{\partial^{2} L}{\partial\f\cyl\: \partial z\cyl}-k_{\popr}\frac{\partial M}{\partial \r\cyl},\\
+&{u\cyl}_z=\frac{\partial\P\cyl}{\partial z\cyl}-\frac{\partial^{2} L}{\partial \r^2\cyl}-\frac{1}{\r\cyl}\frac{\partial L}{\partial \r\cyl}-\frac{1}{\r^2\cyl}\frac{\partial^2L}{\partial\f^2\cyl}.
 \end{align}
 
-Соотношения между компонентами тензора напряжений $\sigma_{ij}$ и вектора смещения $\bar{u}$ в однородном изотропном упругом цилиндре записываются следующим образом:
+Соотношения между компонентами тензора напряжений $\sigma_{ij}$ и вектора смещения $\bar{u}\cyl$ в однородном изотропном упругом цилиндре записываются следующим образом:
 \begin{equation}\label{tenzor_napr}
 \begin{aligned}
-&\sigma_{\r\cyl\r\cyl}=\lambda\Biggl(\frac{\partial u_{\r\cyl}}{\partial \r\cyl}+\frac{1}{\r\cyl}\biggl(\frac{\partial u_{\f\cyl}}{\partial\f\cyl}+u_{\r\cyl}\biggr)+\frac{\partial u_{z\cyl}}{\partial z\cyl}\Biggr)+2\:\mu\:\frac{\partial u_{\r\cyl}}{\partial \r\cyl},\\
-&\sigma_{\f\cyl\f\cyl}=\lambda\Biggl(\frac{\partial u_{\r\cyl}}{\partial \r\cyl}+\frac{1}{\r\cyl}\biggl(\frac{\partial u_{\f\cyl}}{\partial\f\cyl}+u_{\r\cyl}\biggr)+\frac{\partial u_{z\cyl}}{\partial z\cyl}\Biggr)+2\:\mu\:\biggl(\frac{1}{\r\cyl}\frac{\partial u_{\f\cyl}}{\partial\f\cyl}+\frac{u_{\r\cyl}}{\r\cyl}\biggr),\\
-&\sigma_{z\cyl z\cyl}=\lambda\Biggl(\frac{\partial u_{\r\cyl}}{\partial \r\cyl}+\frac{1}{\r\cyl}\biggl(\frac{\partial u_{\f\cyl}}{\partial\f\cyl}+u_{\r\cyl}\biggr)+\frac{\partial u_{z\cyl}}{\partial z\cyl}\Biggr)+2\:\mu\:\frac{\partial u_{z\cyl}}{\partial z\cyl},\\
-&\sigma_{\r\cyl\f\cyl}=\mu\Biggl(\frac{1}{\r\cyl}\frac{\partial u_{\r\cyl}}{\partial\f\cyl}+\frac{\partial u_{\f\cyl}}{\partial \r\cyl}-\frac{u_{\f\cyl}}{\r\cyl}\Biggr),\\
-&\sigma_{\r\cyl z\cyl}=\mu\Biggl(\frac{\partial u_{z\cyl}}{\partial \r\cyl}+\frac{\partial u_{\r\cyl}}{\partial z\cyl}\Biggr),\\
-&\sigma_{\f\cyl z\cyl}=\mu\Biggl(\frac{\partial u_{\f\cyl}}{\partial z\cyl}+\frac{1}{\r\cyl}\frac{\partial u_{z\cyl}}{\partial \f\cyl}\Biggr).
+&{\sigma\cyl}_{\r\r}=\lambda\cyl\Biggl(\frac{\partial {u\cyl}_{\r}}{\partial \r\cyl}+\frac{1}{\r\cyl}\biggl(\frac{\partial {u\cyl}_{\f}}{\partial\f\cyl}+{u\cyl}_{\r}\biggr)+\frac{\partial {u\cyl}_{z}}{\partial z\cyl}\Biggr)+2\:\mu\cyl\frac{\partial {u\cyl}_{\r}}{\partial \r\cyl},\\
+&{\sigma\cyl}_{\f\f}=\lambda\cyl\Biggl(\frac{\partial {u\cyl}_{\r}}{\partial \r\cyl}+\frac{1}{\r\cyl}\biggl(\frac{\partial {u\cyl}_{\f}}{\partial\f\cyl}+{u\cyl}_{\r}\biggr)+\frac{\partial {u\cyl}_{z}}{\partial z\cyl}\Biggr)+2\:\mu\cyl\biggl(\frac{1}{\r\cyl}\frac{\partial {u\cyl}_{\f}}{\partial\f\cyl}+\frac{{u\cyl}_{\r}}{\r\cyl}\biggr),\\
+&{\sigma\cyl}_{zz}=\lambda\cyl\Biggl(\frac{\partial {u\cyl}_{\r}}{\partial \r\cyl}+\frac{1}{\r\cyl}\biggl(\frac{\partial {u\cyl}_{\f}}{\partial\f\cyl}+{u\cyl}_{\r}\biggr)+\frac{\partial {u\cyl}_{z}}{\partial z\cyl}\Biggr)+2\:\mu\cyl\frac{\partial {u\cyl}_{z}}{\partial z\cyl},\\
+&{\sigma\cyl}_{\r\f}=\mu\cyl\Biggl(\frac{1}{\r\cyl}\frac{\partial {u\cyl}_{\r}}{\partial\f\cyl}+\frac{\partial {u\cyl}_{\f}}{\partial \r\cyl}-\frac{{u\cyl}_{\f}}{\r\cyl}\Biggr),\\
+&{\sigma\cyl}_{\r z}=\mu\cyl\Biggl(\frac{\partial {u\cyl}_{z}}{\partial \r\cyl}+\frac{\partial {u\cyl}_{\r}}{\partial z\cyl}\Biggr),\\
+&{\sigma\cyl}_{\f z}=\mu\Biggl(\frac{\partial {u\cyl}_{\f}}{\partial z\cyl}+\frac{1}{\r\cyl}\frac{\partial {u\cyl}_{z}}{\partial \f\cyl}\Biggr).
 \end{aligned}
 \end{equation}
 
