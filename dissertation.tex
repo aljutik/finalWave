@@ -145,6 +145,7 @@ $\bar{e}_{z\cyl}$ -- единичный вектор оси $z\cyl.$
 \end{align}
 
 Соотношения между компонентами тензора напряжений ${\sigma\cyl}_{ij}$ и вектора смещения $\bar{u}\cyl$ в однородном изотропном упругом цилиндре записываются следующим образом:
+\todo{Здесь номер для системы уравнений находится внизу, а должен быть посередине системы}
 \begin{equation}\label{tenzor_napr}
 \begin{aligned}
 &{\sigma\cyl}_{\r\r}=\lambda\cyl\Biggl(\frac{\partial {u\cyl}_{\r}}{\partial \r\cyl}+\frac{1}{\r\cyl}\biggl(\frac{\partial {u\cyl}_{\f}}{\partial\f\cyl}+{u\cyl}_{\r}\biggr)+\frac{\partial {u\cyl}_{z}}{\partial z\cyl}\Biggr)+2\:\mu\cyl\frac{\partial {u\cyl}_{\r}}{\partial \r\cyl},\\
@@ -152,7 +153,7 @@ $\bar{e}_{z\cyl}$ -- единичный вектор оси $z\cyl.$
 &{\sigma\cyl}_{zz}=\lambda\cyl\Biggl(\frac{\partial {u\cyl}_{\r}}{\partial \r\cyl}+\frac{1}{\r\cyl}\biggl(\frac{\partial {u\cyl}_{\f}}{\partial\f\cyl}+{u\cyl}_{\r}\biggr)+\frac{\partial {u\cyl}_{z}}{\partial z\cyl}\Biggr)+2\:\mu\cyl\frac{\partial {u\cyl}_{z}}{\partial z\cyl},\\
 &{\sigma\cyl}_{\r\f}=\mu\cyl\Biggl(\frac{1}{\r\cyl}\frac{\partial {u\cyl}_{\r}}{\partial\f\cyl}+\frac{\partial {u\cyl}_{\f}}{\partial \r\cyl}-\frac{{u\cyl}_{\f}}{\r\cyl}\Biggr),\\
 &{\sigma\cyl}_{\r z}=\mu\cyl\Biggl(\frac{\partial {u\cyl}_{z}}{\partial \r\cyl}+\frac{\partial {u\cyl}_{\r}}{\partial z\cyl}\Biggr),\\
-&{\sigma\cyl}_{\f z}=\mu\Biggl(\frac{\partial {u\cyl}_{\f}}{\partial z\cyl}+\frac{1}{\r\cyl}\frac{\partial {u\cyl}_{z}}{\partial \f\cyl}\Biggr).
+&{\sigma\cyl}_{\f z}=\mu\cyl\Biggl(\frac{\partial {u\cyl}_{\f}}{\partial z\cyl}+\frac{1}{\r\cyl}\frac{\partial {u\cyl}_{z}}{\partial \f\cyl}\Biggr).
 \end{aligned}
 \end{equation}
 
@@ -171,9 +172,9 @@ $\bar{e}_{z\cyl}$ -- единичный вектор оси $z\cyl.$
 \newline
 ${\sigma\l}_{ij}$ -- компоненты тензора напряжений в неоднородном слое.
 
-Соотношения между компонентами тензора напряжений $\sigma_{ij}$ и вектора смещения $\bar{u}$ в неоднородном упругом цилиндрическом слое аналогичны соотношениям для однородного упругого цилиндра, при этом упругие постоянные $\lambda$ и $\mu$ следует заменить на функции $\lambda=\lambda(\r\cyl)$ и $\mu=\mu(\r\cyl).$
+Соотношения между компонентами тензора напряжений ${\sigma\l}_{ij}$ и вектора смещения $\bar{u}\l$ в неоднородном упругом цилиндрическом слое аналогичны соотношениям для однородного упругого цилиндра, при этом упругие постоянные $\lambda\cyl$ и $\mu\cyl$ следует заменить на функции $\lambda\l=\lambda\l(\r\cyl)$ и $\mu\l=\mu\l(\r\cyl).$
 
-Используя эти соотношения, запишем уравнения \eqref{equation_dvij_splosh_sred} через компоненты вектора смещения $\mu.$ Получим
+Используя эти соотношения, запишем уравнения \eqref{equation_dvij_splosh_sred} через компоненты вектора смещения $\bar{u}\l.$ Получим
 \begin{equation}\label{equation_otn_u}
 \begin{aligned}
 &\biggl(\lambda+2\mu\biggr)\frac{\partial^2u_{\r\cyl}}{\partial \r^2\cyl}+\biggl(\frac{\partial\lambda}{\partial \r\cyl}+2\:\frac{\partial\mu}{\partial \r\cyl}+\frac{\lambda+2\mu}{\r\cyl}\biggr)\frac{\partial u_{\r\cyl}}{\partial \r\cyl}+\frac{\mu}{\r^2\cyl}\frac{\partial^2 u_{\r\cyl}}{\partial \f^2\cyl}+\\
