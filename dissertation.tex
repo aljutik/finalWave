@@ -172,20 +172,20 @@ $\bar{e}_{z\cyl}$ -- единичный вектор оси $z\cyl.$
 \newline
 ${\sigma\l}_{ij}$ -- компоненты тензора напряжений в неоднородном слое.
 
-Соотношения между компонентами тензора напряжений ${\sigma\l}_{ij}$ и вектора смещения $\bar{u}\l$ в неоднородном упругом цилиндрическом слое аналогичны соотношениям для однородного упругого цилиндра, при этом упругие постоянные $\lambda\cyl$ и $\mu\cyl$ следует заменить на функции $\lambda\l=\lambda\l(\r\cyl)$ и $\mu\l=\mu\l(\r\cyl).$
+Соотношения между компонентами тензора напряжений ${\sigma\l}_{ij}$ и вектора смещения $\bar{u}\l$ в неоднородном упругом цилиндрическом слое аналогичны соотношениям \eqref{tenzor_napr} для однородного упругого цилиндра, при этом упругие постоянные $\lambda\cyl$ и $\mu\cyl$ следует заменить на функции $\lambda\l=\lambda\l(\r\cyl)$ и $\mu\l=\mu\l(\r\cyl).$
 
 Используя эти соотношения, запишем уравнения \eqref{equation_dvij_splosh_sred} через компоненты вектора смещения $\bar{u}\l.$ Получим
 \begin{equation}\label{equation_otn_u}
 \begin{aligned}
-&\biggl(\lambda+2\mu\biggr)\frac{\partial^2u_{\r\cyl}}{\partial \r^2\cyl}+\biggl(\frac{\partial\lambda}{\partial \r\cyl}+2\:\frac{\partial\mu}{\partial \r\cyl}+\frac{\lambda+2\mu}{\r\cyl}\biggr)\frac{\partial u_{\r\cyl}}{\partial \r\cyl}+\frac{\mu}{\r^2\cyl}\frac{\partial^2 u_{\r\cyl}}{\partial \f^2\cyl}+\\
-&+\mu\:\frac{\partial^2 u_{\r\cyl}}{\partial z^2\cyl}+\frac{\lambda+\mu}{\r\cyl}\frac{\partial^2 u_{\f\cyl}}{\partial \r\cyl\partial\f\cyl}+\frac{1}{\r\cyl}\biggl(\frac{\partial\lambda}{\partial \r\cyl}-\frac{\lambda+3\mu}{\r\cyl}\biggr)\frac{\partial u_{\f\cyl}}{\partial\f\cyl}+\\
-&+\biggl(\lambda+\mu\biggr)\frac{\partial^2 u_{z\cyl}}{\partial \r\cyl\partial z\cyl}+\frac{\partial\lambda}{\partial \r\cyl}\:\frac{\partial u_{z\cyl}}{\partial z\cyl}+\biggl(\frac{1}{\r\cyl}\:\frac{\partial\lambda}{\partial \r\cyl}-\frac{\lambda+2\mu}{\r^2\cyl}+\om^2 p\biggr)u_{\r\cyl}=0,\\
-&\frac{\lambda+\mu}{\r\cyl}\frac{\partial^2u_{\r\cyl}}{\partial \r\cyl\partial\f\cyl}+\frac{1}{\r\cyl}\biggl(\frac{\partial\mu}{\partial \r\cyl}+\frac{\lambda+3\:\mu}{\r\cyl}\biggr)\frac{\partial u_{\r\cyl}}{\partial\f\cyl}+\mu\:\frac{\partial^2 u_{\f\cyl}}{\partial \r^2\cyl}+\\
-&+\frac{\lambda+2\:\mu}{\r^2\cyl}\:\frac{\partial^2 u_{\f\cyl}}{\partial \f^2\cyl}+\biggl(\frac{\partial\mu}{\partial \r\cyl}+\frac{\mu}{\r\cyl}\biggr)\frac{\partial u_{\f\cyl}}{\partial \r\cyl}+\mu\:\frac{\partial^2 u_{\f\cyl}}{\partial z^2\cyl}+\\
-&+\frac{\lambda+\mu}{\r\cyl}\frac{\partial^2 u_{z\cyl}}{\partial \f\cyl\partial z\cyl}+\biggl(-\frac{1}{\r\cyl}\:\frac{\partial\mu}{\partial \r\cyl}-\frac{\mu}{\r^2\cyl}+\om^2 p\biggr)u_{\f\cyl}=0,\\
-&\biggl(\lambda+\mu\biggr)\frac{\partial^2u_{\r\cyl}}{\partial \r\cyl\partial z\cyl}+\biggl(\frac{\partial\mu}{\partial \r\cyl}+\frac{\lambda+\mu}{\r\cyl}\biggr)\frac{\partial u_{\r\cyl}}{\partial z\cyl}+\frac{\lambda+\mu}{\r\cyl}\:\frac{\partial^2 u_{\f\cyl}}{\partial \f\cyl\partial z\cyl}+\\
-&+\mu\:\frac{\partial^2 u_{z\cyl}}{\partial \r^2\cyl}+\frac{\mu}{\r^2\cyl}\:\frac{\partial^2 u_{z\cyl}}{\partial {\f\cyl}^2}+\biggl(\lambda+2\:\mu\biggr)\frac{\partial^2 u_{z\cyl}}{\partial z^2\cyl}+\\
-&+\biggl(\frac{\partial\mu}{\partial \r\cyl}+\frac{\mu}{\r\cyl}\biggr)\frac{\partial u_{z\cyl}}{\partial \r\cyl}+\om^2 p\:u_{z\cyl}=0.
+&\biggl(\lambda\l+2\mu\l\biggr)\frac{\partial^2{u\l}_{\r}}{\partial \r^2\cyl}+\biggl(\frac{\partial\lambda\l}{\partial \r\cyl}+2\:\frac{\partial\mu\l}{\partial \r\cyl}+\frac{\lambda\l+2\mu\l}{\r\cyl}\biggr)\frac{\partial {u\l}_{\r}}{\partial \r\cyl}+\frac{\mu\l}{\r^2\cyl}\frac{\partial^2 {u\l}_{\r}}{\partial \f^2\cyl}+\\
+&+\mu\l\:\frac{\partial^2 {u\l}_{\r}}{\partial z^2\cyl}+\frac{\lambda\l+\mu\l}{\r\cyl}\frac{\partial^2 {u\l}_{\f}}{\partial \r\cyl\partial\f\cyl}+\frac{1}{\r\cyl}\biggl(\frac{\partial\lambda\l}{\partial \r\cyl}-\frac{\lambda\l+3\mu\l}{\r\cyl}\biggr)\frac{\partial {u\l}_{\f}}{\partial\f\cyl}+\\
+&+\biggl(\lambda\l+\mu\l\biggr)\frac{\partial^2 {u\l}_{z}}{\partial \r\cyl\partial z\cyl}+\frac{\partial\lambda\l}{\partial \r\cyl}\:\frac{\partial {u\l}_{z}}{\partial z\cyl}+\biggl(\frac{1}{\r\cyl}\:\frac{\partial\lambda\l}{\partial \r\cyl}-\frac{\lambda\l+2\mu\l}{\r^2\cyl}+\om^2 p\l\biggr){u\l}_{\r}=0,\\
+&\frac{\lambda\l+\mu\l}{\r\cyl}\frac{\partial^2{u\l}_{\r}}{\partial \r\cyl\partial\f\cyl}+\frac{1}{\r\cyl}\biggl(\frac{\partial\mu\l}{\partial \r\cyl}+\frac{\lambda\l+3\:\mu\l}{\r\cyl}\biggr)\frac{\partial {u\l}_{\r}}{\partial\f\cyl}+\mu\l\:\frac{\partial^2 {u\l}_{\f}}{\partial \r^2\cyl}+\\
+&+\frac{\lambda\l+2\:\mu\l}{\r^2\cyl}\:\frac{\partial^2 {u\l}_{\f}}{\partial \f^2\cyl}+\biggl(\frac{\partial\mu\l}{\partial \r\cyl}+\frac{\mu\l}{\r\cyl}\biggr)\frac{\partial {u\l}_{\f}}{\partial \r\cyl}+\mu\l\:\frac{\partial^2 {u\l}_{\f}}{\partial z^2\cyl}+\\
+&+\frac{\lambda\l+\mu\l}{\r\cyl}\frac{\partial^2 {u\l}_{z}}{\partial \f\cyl\partial z\cyl}+\biggl(-\frac{1}{\r\cyl}\:\frac{\partial\mu\l}{\partial \r\cyl}-\frac{\mu\l}{\r^2\cyl}+\om^2 p\l\biggr){u\l}_{\f}=0,\\
+&\biggl(\lambda\l+\mu\l\biggr)\frac{\partial^2{u\l}_{\r}}{\partial \r\cyl\partial z\cyl}+\biggl(\frac{\partial\mu\l}{\partial \r\cyl}+\frac{\lambda\l+\mu\l}{\r\cyl}\biggr)\frac{\partial {u\l}_{\r}}{\partial z\cyl}+\frac{\lambda\l+\mu\l}{\r\cyl}\:\frac{\partial^2 {u\l}_{\f}}{\partial \f\cyl\partial z\cyl}+\\
+&+\mu\l\:\frac{\partial^2 {u\l}_{z}}{\partial \r^2\cyl}+\frac{\mu\l}{\r^2\cyl}\:\frac{\partial^2 {u\l}_{z}}{\partial {\f\cyl}^2}+\biggl(\lambda\l+2\:\mu\l\biggr)\frac{\partial^2 {u\l}_{z}}{\partial z^2\cyl}+\\
+&+\biggl(\frac{\partial\mu\l}{\partial \r\cyl}+\frac{\mu\l}{\r\cyl}\biggr)\frac{\partial {u\l}_{z}}{\partial \r\cyl}+\om^2 p\l\:{u\l}_{z}=0.
 \end{aligned}
 \end{equation}
 
