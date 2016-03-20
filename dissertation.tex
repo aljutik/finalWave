@@ -204,33 +204,33 @@ ${\sigma\l}_{ij}$ -- компоненты тензора напряжений в
 Граничные условия на внешней поверхности слоя заключаются в равенстве нормальных скоростей частиц упругой неоднородной среды и жидкости, равенстве на ней нормального напряжения и акустического давления, отсутствии касательных напряжений:
 \begin{equation}\label{vneshnaja_pover_sloja}
 \begin{aligned}
-\r\cyl &=R\l: &-iwu_{\r\l}&=v_{\r\en}, &\sigma_{\r\r\l}&=-P\en, &\sigma_{\r\f\l}&=0, &\sigma_{\r z\l}&=0.
+\r\cyl &=R\l: &-iw{u\l}_{\r}&={v\en}_{\r}, &{\sigma\l}_{\r\r}&=-P\en, &{\sigma\l}_{\r\f}&=0, &{\sigma\l}_{\r z}&=0.
 \end{aligned}
 \end{equation}
 
 На внутренней поверхности слоя при переходе через границу раздела упругих сред должны быть непрерывны составляющие вектора смещения частиц, а также нормальные и тангенциальные напряжения:
 \begin{equation}\label{vnutr_pover_sloja}
 \begin{aligned}
-\r\cyl&=R\cyl: &u_{\r\l}&=u_{\r\cyl}, &u_{\f\l}&=u_{\f\cyl}, &u_{z\l}&=u_{z\cyl},\\
-& &\sigma_{\r\r\l}&=\sigma_{\r\r\cyl}, &\sigma_{\r\f\l}&=\sigma_{\r\f\cyl},  &\sigma_{\r z\l}&=\sigma_{\r z\cyl}.
+\r\cyl&=R\cyl: &{u\l}_{\r}&={u\cyl}_{\r}, &{u\l}_{\f}&={u\cyl}_{\f}, &{u\l}_{z}&={u\cyl}_{z},\\
+& &{\sigma\l}_{\r\r}&={\sigma\cyl}_{\r\r}, &{\sigma\l}_{\r\f}&={\sigma\cyl}_{\r\f},  &{\sigma\l}_{\r z}&={\sigma\cyl}_{\r z}.
 \end{aligned}
 \end{equation}
 
 На границе полости $\r\c=R\c$ должны выполняться граничные условия, заключающиеся в отсутствии нормальных и тангециальных составляющих тензора напряжений
 \begin{equation}\label{gran_pol}
 \begin{aligned}
-\r\c &=R\c: &-iwu_{\r\cyl}&=v_{\r\c}, &\sigma_{\r\r\cyl}&=-P\c, &\sigma_{\r\f\cyl}&=0, &\sigma_{\r z\cyl}&=0.
+\r\c &=R\c: &-iw{u\cyl}_{\r}&={v\c}_{\r}, &{\sigma\cyl}_{\r\r}&=-P\c, &{\sigma\cyl}_{\r\f}&=0, &{\sigma\cyl}_{\r z}&=0.
 \end{aligned}
 \end{equation}
 
 Используя формулы
-$$v_{\r\en}=\frac{\de(\Psi_{o}+\Psi_s)}{\de\r},\:\:\: P\en=iwp\en(\Psi_{o}+\Psi_s)$$
-и выражение \eqref{tenzor_napr} запишем граничные условия \eqref{vneshnaja_pover_sloja} через функции $\Psi_s,$ $u_\r,$ $u_\f,$ $u_z$. Получим при $\r\cyl=R\l$
+$${v\en}_{\r}=\frac{\de(\Psi_{o}+\Psi_s)}{\de\r\cyl},\:\:\: P\en=iwp\en(\Psi_{o}+\Psi_s)$$
+и выражение \eqref{tenzor_napr} запишем граничные условия \eqref{vneshnaja_pover_sloja} через функции $\Psi_{o},$ $\Psi_s,$ ${u\l}_\r,$ ${u\l}_\f,$ ${u\l}_z$. Получим при $\r\cyl=R\l$
 \begin{align}
-&\frac{\de(\Psi_{o}+\Psi_s)}{\de\r}=-iwu_{\r\l},\\
-&\lambda\Biggl(\frac{\partial u_{\r}}{\partial \r}+\frac{1}{\r}\biggl(\frac{\partial u_\f}{\partial\f}+u_{\r}\biggr)+\frac{\partial u_z}{\partial z}\Biggr)+2\:\mu\:\frac{\partial u_{\r}}{\partial \r}=-iwp\en(\Psi_{o}+\Psi_s),\\
-&\lambda\Biggl(\frac{\partial u_{\r}}{\partial \r}+\frac{1}{\r}\biggl(\frac{\partial u_\f}\mu\Biggl(\frac{1}{\r}\frac{\partial u_{\r}}{\partial\f}+\frac{\partial u_\f}{\partial \r}-\frac{u_{\f}}{\r}\Biggr)=0,\\
-&\mu\Biggl(\frac{\partial u_z}{\partial \r}+\frac{\partial u_{\r}}{\partial z}\Biggr)=0.
+&\frac{\de(\Psi_{o}+\Psi_s)}{\de\r\cyl}=-iw{u\l}_{\r},\\
+&\lambda\l\Biggl(\frac{\partial {u\l}_{\r}}{\partial \r\l}+\frac{1}{\r\l}\biggl(\frac{\partial {u\l}_\f}{\partial\f\l}+{u\l}_{\r}\biggr)+\frac{\partial {u\l}_z}{\partial z\l}\Biggr)+2\:\mu\l\:\frac{\partial {u\l}_{\r}}{\partial \r\l}=-iwp\en(\Psi_{o}+\Psi_s),\\
+&\lambda\l\Biggl(\frac{\partial {u\l}_{\r}}{\partial \r\l}+\frac{1}{\r\l}\biggl(\frac{\partial {u\l}_\f}{\mu\l}\Biggl(\frac{1}{\r\l}\frac{\partial {u\l}_{\r}}{\partial\f\l}+\frac{\partial {u\l}_\f}{\partial \r\l}-\frac{{u\l}_{\f}}{\r\l}\Biggr)=0,\\
+&\mu\l\Biggl(\frac{\partial {u\l}_z}{\partial \r\l}+\frac{\partial {u\l}_{\r}}{\partial z\l}\Biggr)=0.
 \end{align}
 
 Аналогично, используя выражения \eqref{u_cherez_L_M}, \eqref{tenzor_napr} запишем граничные условия \eqref{vnutr_pover_sloja} через функции $u_\r,$ $u_\f,$ $u_z,$ $ \P\cyl,$ $L$ и $M ,$ а граничные условия \eqref{vnutr_pover_sloja} через $\P\cyl,$ $L$ и $M.$
