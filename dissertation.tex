@@ -138,18 +138,19 @@ $\bar{e}_{z\cyl}$ -- единичный вектор оси $z\cyl.$
 где $\beta_{\prodol}=\sqrt{k_{\prodol}^2-\alpha^2}, \beta_{\popr}=\sqrt{k_{\popr}^2-\alpha^2}.$
 
 Компоненты вектора смещения $\bar{u}\cyl,$ записанные через функции $\P\cyl, L$ и $M$ в цилиндрической системе координат, имеют вид
-\begin{align}\label{u_cherez_L_M}
+\begin{equation}\label{u_cherez_L_M}
+\begin{split}
 &{u\cyl}_\r=\frac{\partial \P\cyl}{\partial\r\cyl}+\frac{\partial^2 L}{\partial\r\cyl\:\partial z\cyl}+\frac{k_{\popr}}{\r\cyl}\frac{\partial M}{\partial \f\cyl},\\
 &{u\cyl}_\f=\frac{1}{\r\cyl}\frac{\partial \P\cyl}{\partial \f\cyl}+\frac{1}{\r\cyl}\frac{\partial^{2} L}{\partial\f\cyl\: \partial z\cyl}-k_{\popr}\frac{\partial M}{\partial \r\cyl},\\
 &{u\cyl}_z=\frac{\partial\P\cyl}{\partial z\cyl}-\frac{\partial^{2} L}{\partial \r^2\cyl}-\frac{1}{\r\cyl}\frac{\partial L}{\partial \r\cyl}-\frac{1}{\r^2\cyl}\frac{\partial^2L}{\partial\f^2\cyl}.
-\end{align}
+\end{split}
+\end{equation}
 
 Соотношения между компонентами тензора напряжений ${\sigma\cyl}_{ij}$ и вектора смещения $\bar{u}\cyl$ в однородном изотропном упругом цилиндре записываются следующим образом:
-\todo{Здесь номер для системы уравнений находится внизу, а должен быть посередине системы}
 \begin{equation}\label{tenzor_napr}
 \begin{aligned}
 &{\sigma\cyl}_{\r\r}=\lambda\cyl\Biggl(\frac{\partial {u\cyl}_{\r}}{\partial \r\cyl}+\frac{1}{\r\cyl}\biggl(\frac{\partial {u\cyl}_{\f}}{\partial\f\cyl}+{u\cyl}_{\r}\biggr)+\frac{\partial {u\cyl}_{z}}{\partial z\cyl}\Biggr)+2\:\mu\cyl\frac{\partial {u\cyl}_{\r}}{\partial \r\cyl},\\
-&{\sigma\cyl}_{\f\f}=\lambda\cyl\Biggl(\frac{\partial {u\cyl}_{\r}}{\partial \r\cyl}+\frac{1}{\r\cyl}\biggl(\frac{\partial {u\cyl}_{\f}}{\partial\f\cyl}+{u\cyl}_{\r}\biggr)+\frac{\partial {u\cyl}_{z}}{\partial z\cyl}\Biggr)+2\:\mu\cyl\biggl(\frac{1}{\r\cyl}\frac{\partial {u\cyl}_{\f}}{\partial\f\cyl}+\frac{{u\cyl}_{\r}}{\r\cyl}\biggr),\\
+&{\sigma\cyl}_{\f\f}=\lambda\cyl\Biggl(\frac{\partial {u\cyl}_{\r}}{\partial \r\cyl}+\frac{1}{\r\cyl}\biggl(\frac{\partial {u\cyl}_{\f}}{\partial\f\cyl}+{u\cyl}_{\r}\biggr)+\frac{\partial {u\cyl}_{z}}{\partial z\cyl}\Biggr)+\frac{2\:\mu\cyl}{\r\cyl}\biggl(\frac{\partial {u\cyl}_{\f}}{\partial\f\cyl}+{u\cyl}_{\r}\biggr),\\
 &{\sigma\cyl}_{zz}=\lambda\cyl\Biggl(\frac{\partial {u\cyl}_{\r}}{\partial \r\cyl}+\frac{1}{\r\cyl}\biggl(\frac{\partial {u\cyl}_{\f}}{\partial\f\cyl}+{u\cyl}_{\r}\biggr)+\frac{\partial {u\cyl}_{z}}{\partial z\cyl}\Biggr)+2\:\mu\cyl\frac{\partial {u\cyl}_{z}}{\partial z\cyl},\\
 &{\sigma\cyl}_{\r\f}=\mu\cyl\Biggl(\frac{1}{\r\cyl}\frac{\partial {u\cyl}_{\r}}{\partial\f\cyl}+\frac{\partial {u\cyl}_{\f}}{\partial \r\cyl}-\frac{{u\cyl}_{\f}}{\r\cyl}\Biggr),\\
 &{\sigma\cyl}_{\r z}=\mu\cyl\Biggl(\frac{\partial {u\cyl}_{z}}{\partial \r\cyl}+\frac{\partial {u\cyl}_{\r}}{\partial z\cyl}\Biggr),\\
@@ -177,9 +178,15 @@ ${\sigma\l}_{ij}$ -- компоненты тензора напряжений в
 Используя эти соотношения, запишем уравнения \eqref{equation_dvij_splosh_sred} через компоненты вектора смещения $\bar{u}\l.$ Получим
 \begin{equation}\label{equation_otn_u}
 \begin{aligned}
-&\biggl(\lambda\l+2\mu\l\biggr)\frac{\partial^2{u\l}_{\r}}{\partial \r^2\cyl}+\biggl(\frac{\partial\lambda\l}{\partial \r\cyl}+2\:\frac{\partial\mu\l}{\partial \r\cyl}+\frac{\lambda\l+2\mu\l}{\r\cyl}\biggr)\frac{\partial {u\l}_{\r}}{\partial \r\cyl}+\frac{\mu\l}{\r^2\cyl}\frac{\partial^2 {u\l}_{\r}}{\partial \f^2\cyl}+\\
-&+\mu\l\:\frac{\partial^2 {u\l}_{\r}}{\partial z^2\cyl}+\frac{\lambda\l+\mu\l}{\r\cyl}\frac{\partial^2 {u\l}_{\f}}{\partial \r\cyl\partial\f\cyl}+\frac{1}{\r\cyl}\biggl(\frac{\partial\lambda\l}{\partial \r\cyl}-\frac{\lambda\l+3\mu\l}{\r\cyl}\biggr)\frac{\partial {u\l}_{\f}}{\partial\f\cyl}+\\
-&+\biggl(\lambda\l+\mu\l\biggr)\frac{\partial^2 {u\l}_{z}}{\partial \r\cyl\partial z\cyl}+\frac{\partial\lambda\l}{\partial \r\cyl}\:\frac{\partial {u\l}_{z}}{\partial z\cyl}+\biggl(\frac{1}{\r\cyl}\:\frac{\partial\lambda\l}{\partial \r\cyl}-\frac{\lambda\l+2\mu\l}{\r^2\cyl}+\om^2 p\l\biggr){u\l}_{\r}=0,\\
+&\biggl(\lambda\l+2\mu\l\biggr)\frac{\partial^2{u\l}_{\r}}{\partial \r^2\cyl}
++\biggl(\frac{\partial\lambda\l}{\partial \r\cyl}+2\:\frac{\partial\mu\l}{\partial \r\cyl}+\frac{\lambda\l+2\mu\l}{\r\cyl}\biggr)\frac{\partial {u\l}_{\r}}{\partial \r\cyl}+\\
+&+\frac{\mu\l}{\r^2\cyl}\frac{\partial^2 {u\l}_{\r}}{\partial \f^2\cyl}
++\mu\l\:\frac{\partial^2 {u\l}_{\r}}{\partial z^2\cyl}
++\frac{\lambda\l+\mu\l}{\r\cyl}\frac{\partial^2 {u\l}_{\f}}{\partial \r\cyl\partial\f\cyl}+\\
+&+\frac{1}{\r\cyl}\biggl(\frac{\partial\lambda\l}{\partial \r\cyl}-\frac{\lambda\l+3\mu\l}{\r\cyl}\biggr)\frac{\partial {u\l}_{\f}}{\partial\f\cyl}
++\biggl(\lambda\l+\mu\l\biggr)\frac{\partial^2 {u\l}_{z}}{\partial \r\cyl\partial z\cyl}
++\frac{\partial\lambda\l}{\partial \r\cyl}\:\frac{\partial {u\l}_{z}}{\partial z\cyl}+\\
+&+\biggl(\frac{1}{\r\cyl}\:\frac{\partial\lambda\l}{\partial \r\cyl}-\frac{\lambda\l+2\mu\l}{\r^2\cyl}+\om^2 p\l\biggr){u\l}_{\r}=0,\\
 &\frac{\lambda\l+\mu\l}{\r\cyl}\frac{\partial^2{u\l}_{\r}}{\partial \r\cyl\partial\f\cyl}+\frac{1}{\r\cyl}\biggl(\frac{\partial\mu\l}{\partial \r\cyl}+\frac{\lambda\l+3\:\mu\l}{\r\cyl}\biggr)\frac{\partial {u\l}_{\r}}{\partial\f\cyl}+\mu\l\:\frac{\partial^2 {u\l}_{\f}}{\partial \r^2\cyl}+\\
 &+\frac{\lambda\l+2\:\mu\l}{\r^2\cyl}\:\frac{\partial^2 {u\l}_{\f}}{\partial \f^2\cyl}+\biggl(\frac{\partial\mu\l}{\partial \r\cyl}+\frac{\mu\l}{\r\cyl}\biggr)\frac{\partial {u\l}_{\f}}{\partial \r\cyl}+\mu\l\:\frac{\partial^2 {u\l}_{\f}}{\partial z^2\cyl}+\\
 &+\frac{\lambda\l+\mu\l}{\r\cyl}\frac{\partial^2 {u\l}_{z}}{\partial \f\cyl\partial z\cyl}+\biggl(-\frac{1}{\r\cyl}\:\frac{\partial\mu\l}{\partial \r\cyl}-\frac{\mu\l}{\r^2\cyl}+\om^2 p\l\biggr){u\l}_{\f}=0,\\
@@ -230,41 +237,99 @@ $${v\en}_{\r}=\frac{\de(\Psi_{o}+\Psi_s)}{\de\r\cyl},\:\:\: P\en=iwp\en(\Psi_{o}
 &\frac{\de(\Psi_{o}+\Psi_s)}{\de\r\cyl}=-iw{u\l}_{\r},\\
 &\lambda\l\Biggl(\frac{\partial {u\l}_{\r}}{\partial \r\l}+\frac{1}{\r\l}\biggl(\frac{\partial {u\l}_\f}{\partial\f\l}+{u\l}_{\r}\biggr)+\frac{\partial {u\l}_z}{\partial z\l}\Biggr)+2\:\mu\l\:\frac{\partial {u\l}_{\r}}{\partial \r\l}=-iwp\en(\Psi_{o}+\Psi_s),\\
 &\mu\l\Biggl(\frac{1}{\r\l}\frac{\partial {u\l}_{\r}}{\partial\f\l}+\frac{\partial {u\l}_{\f}}{\partial \r\l}-\frac{{u\l}_{\f}}{\r\l}\Biggr)=0,\\
-&\mu\l\Biggl(\frac{\partial {u\l}_z}{\partial \r\l}+\frac{\partial {u\l}_{\r}}{\partial z\l}\Biggr)=0.\\
- \end{align}
+&\mu\l\Biggl(\frac{\partial {u\l}_z}{\partial \r\l}+\frac{\partial {u\l}_{\r}}{\partial z\l}\Biggr)=0.
+\end{align}
 
-\todo{Исправить фразу}
-Аналогично, используя выражения \eqref{u_cherez_L_M}, \eqref{tenzor_napr} запишем граничные условия \eqref{vnutr_pover_sloja} через функции ${u\l}_\r,$ ${u\l}_\f,$ ${u\l}_z,$ $ \P\cyl,$ $L$ и $M ,$ а граничные условия \eqref{gran_pol} через $\P\cyl,$ $L$ и $M.$
-\todo {Подставить и переписать ${u}\cyl$}
+Аналогично, используя выражения \eqref{u_cherez_L_M}, \eqref{tenzor_napr} запишем граничные условия \eqref{vnutr_pover_sloja} через функции ${u\l}_\r,$ ${u\l}_\f,$ ${u\l}_z,$ $ \P\cyl,$ $L$ и $M ,$ а граничные условия \eqref{gran_pol} через $\P\cyl,$ $ \P\c,$ $L$ и $M.$
 \begin{align}
-&{u\l}_\r=\frac{\partial \P\cyl}{\partial\r\cyl}+\frac{\partial^2 L}{\partial\r\cyl\:\partial z\cyl}+\frac{k_{\popr}}{\r\cyl}\frac{\partial M}{\partial \f\cyl},\\
-&{u\l}_\f=\frac{1}{\r\cyl}\frac{\partial \P\cyl}{\partial \f\cyl}+\frac{1}{\r\cyl}\frac{\partial^{2} L}{\partial\f\cyl\: \partial z\cyl}-k_{\popr}\frac{\partial M}{\partial \r\cyl},\\
-&{u\l}_z=\frac{\partial\P\cyl}{\partial z\cyl}-\frac{\partial^{2} L}{\partial \r^2\cyl}-\frac{1}{\r\cyl}\frac{\partial L}{\partial \r\cyl}-\frac{1}{\r^2\cyl}\frac{\partial^2L}{\partial\f^2\cyl},\\
+\begin{split}
+&{u\l}_\r=\frac{\partial \P\cyl}{\partial\r\cyl}+\frac{\partial^2 L}{\partial\r\cyl\:\partial z\cyl}+\frac{k_{\popr}}{\r\cyl}\frac{\partial M}{\partial \f\cyl},
+\end{split}\\
+\begin{split}
+&{u\l}_\f=\frac{1}{\r\cyl}\frac{\partial \P\cyl}{\partial \f\cyl}+\frac{1}{\r\cyl}\frac{\partial^{2} L}{\partial\f\cyl\: \partial z\cyl}-k_{\popr}\frac{\partial M}{\partial \r\cyl},
+\end{split}\\
+\begin{split}
+&{u\l}_z=\frac{\partial\P\cyl}{\partial z\cyl}-\frac{\partial^{2} L}{\partial \r^2\cyl}-\frac{1}{\r\cyl}\frac{\partial L}{\partial \r\cyl}-\frac{1}{\r^2\cyl}\frac{\partial^2L}{\partial\f^2\cyl},
+\end{split}\\
+\begin{split}
 &\lambda\l\Biggl(\frac{\partial {u\l}_{\r}}{\partial \r\l}+\frac{1}{\r\l}\biggl(\frac{\partial {u\l}_\f}{\partial\f\l}+{u\l}_{\r}\biggr)+\frac{\partial {u\l}_z}{\partial z\l}\Biggr)+2\:\mu\l\:\frac{\partial {u\l}_{\r}}{\partial \r\l}=\\
-&\frac1{\r^2\cyl}\Biggl(-\lambda\cyl\frac{\partial^3L}{\partial z\cyl\partial\f^2\cyl}+2\mu\cyl \r^2\cyl\frac{\partial^3L}{\partial z\cyl\partial\r^2\cyl}+2\r\cyl\Biggl(\Biggl[\frac12\r\cyl-\frac12\Biggr]\lambda\cyl+\r\cyl\mu\cyl\Biggr)\cdot\\
-&\cdot k\popr\frac{\partial^2M}{\partial \r\cyl\partial\f\cyl}+2\Biggl(\frac12\lambda\cyl+\mu\cyl\Biggr)\r^2\cyl\frac{\partial^2\Psi\cyl}{\partial \r^2\cyl}+\Biggl(\frac{\partial^2\Psi\cyl}{\partial\f^2\cyl}+\\
-&\r\cyl\Biggl(\r\cyl\frac{\partial^2\Psi\cyl}{\partial z^2\cyl}+\frac{\partial \Psi\cyl}{\partial \r\cyl}+k\popr\frac{\partial M}{\partial\f\cyl}\Biggr)\Biggr)\lambda\cyl\Biggr),\\
-&\mu\l\Biggl(\frac{1}{\r\l}\frac{\partial {u\l}_{\r}}{\partial\f\l}+\frac{\partial {u\l}_{\f}}{\partial \r\l}-\frac{{u\l}_{\f}}{\r\l}\Biggr)=\\
-&=\frac{\mu\cyl}{\r^2\cyl}\Biggl(2\r\cyl\frac{\partial^2\Psi\cyl}{\partial\r\cyl\partial\f\cyl}+\r\cyl\frac{\partial^3 L}{\partial\r\cyl\partial\f\cyl\partial z\cyl}+\r\cyl k\popr\frac{\partial^2 M}{\partial\f^2\cyl}-\\
-&-2\frac{\partial \Psi\cyl}{\partial\f\cyl}-k\popr \r^2\cyl\frac{\partial^2 M}{\partial\r^2\cyl}+k\popr\r\cyl\frac{\partial M}{\partial\r\cyl}\Biggr),\\
-&\mu\l\Biggl(\frac{\partial {u\l}_z}{\partial \r\l}+\frac{\partial {u\l}_{\r}}{\partial z\l}\Biggr)=\\
-&=\mu\cyl\Biggl(2\frac{\partial^2\Psi\cyl}{\partial\r\cyl\partial z\cyl}-\frac{\partial^3 L}{\partial\r^3\cyl}+\frac1{\r^2\cyl}\frac{\partial L}{\partial\r\cyl}-\frac1{\r\cyl}\frac{\partial^2 L}{\partial\r^2\cyl}+\frac2{\r^3\cyl}\frac{\partial^2 L}{\partial\f^2\cyl}-\frac1{\r^2\cyl}\frac{\partial^3 L}{\partial\r\cyl\partial\f^2\cyl}+\\
-&+\frac{\partial^3 L}{\partial\r\cyl\partial z^3\cyl}+k\popr\frac{\partial^2 M}{\partial\f\cyl\partial z\cyl}\Biggr).
+&=\frac1{\r^2\cyl}\Biggl(
+-\lambda\cyl\frac{\partial^3L}{\partial z\cyl\partial\f^2\cyl}
++2\mu\cyl \r^2\cyl\frac{\partial^3L}{\partial z\cyl\partial\r^2\cyl}
++2\r\cyl\Biggl(\Biggl[\frac12\r\cyl
+-\frac12\Biggr]\lambda\cyl
++\r\cyl\mu\cyl\Biggr)\cdot\\
+&\cdot k\popr\frac{\partial^2M}{\partial \r\cyl\partial\f\cyl}
++2\Biggl(\frac12\lambda\cyl
++\mu\cyl\Biggr)\r^2\cyl\frac{\partial^2\Psi\cyl}{\partial \r^2\cyl}
++\Biggl(\frac{\partial^2\Psi\cyl}{\partial\f^2\cyl}+\\
+&+\r\cyl\Biggl(\r\cyl\frac{\partial^2\Psi\cyl}{\partial z^2\cyl}
++\frac{\partial \Psi\cyl}{\partial \r\cyl}
++k\popr\frac{\partial M}{\partial\f\cyl}\Biggr)\Biggr)\lambda\cyl\Biggr),
+\end{split}
+\end{align}
+\begin{align}
+\begin{split}
+&\mu\l\Biggl(\frac{1}{\r\l}\frac{\partial {u\l}_{\r}}{\partial\f\l}+\frac{\partial {u\l}_{\f}}{\partial \r\l}-\frac{{u\l}_{\f}}{\r\l}\Biggr)=\frac{\mu\cyl}{\r^2\cyl}\Biggl(2\r\cyl\frac{\partial^2\Psi\cyl}{\partial\r\cyl\partial\f\cyl}+\r\cyl\frac{\partial^3 L}{\partial\r\cyl\partial\f\cyl\partial z\cyl}+\\
+&+\r\cyl k\popr\frac{\partial^2 M}{\partial\f^2\cyl}-2\frac{\partial \Psi\cyl}{\partial\f\cyl}-k\popr \r^2\cyl\frac{\partial^2 M}{\partial\r^2\cyl}+k\popr\r\cyl\frac{\partial M}{\partial\r\cyl}\Biggr),
+\end{split}\\
+\begin{split}
+&\mu\l\Biggl(\frac{\partial {u\l}_z}{\partial \r\l}+\frac{\partial {u\l}_{\r}}{\partial z\l}\Biggr)=\mu\cyl\Biggl(2\frac{\partial^2\Psi\cyl}{\partial\r\cyl\partial z\cyl}-\frac{\partial^3 L}{\partial\r^3\cyl}+\frac1{\r^2\cyl}\frac{\partial L}{\partial\r\cyl}-\frac1{\r\cyl}\frac{\partial^2 L}{\partial\r^2\cyl}+\\
+&+\frac2{\r^3\cyl}\frac{\partial^2 L}{\partial\f^2\cyl}-\frac1{\r^2\cyl}\frac{\partial^3 L}{\partial\r\cyl\partial\f^2\cyl}+\frac{\partial^3 L}{\partial\r\cyl\partial z^3\cyl}+k\popr\frac{\partial^2 M}{\partial\f\cyl\partial z\cyl}\Biggr).
+\end{split}
 \end{align}
 
 Граничные условия \eqref{gran_pol} примут вид:
 \begin{align}
-&\frac{\de\Psi\c}{\de\r\c}=-iw{u\cyl}_{\r},\\
-&\frac1{\r^2\cyl}\Biggl(-\lambda\cyl\frac{\partial^3L}{\partial z\cyl\partial\f^2\cyl}+2\mu\cyl \r^2\cyl\frac{\partial^3L}{\partial z\cyl\partial\r^2\cyl}+2\r\cyl\Biggl(\Biggl[\frac12\r\cyl-\frac12\Biggr]\lambda\cyl+\r\cyl\mu\cyl\Biggr)\cdot\\
-&\cdot k\popr\frac{\partial^2M}{\partial \r\cyl\partial\f\cyl}+2\Biggl(\frac12\lambda\cyl+\mu\cyl\Biggr)\r^2\cyl\frac{\partial^2\Psi\cyl}{\partial \r^2\cyl}+\Biggl(\frac{\partial^2\Psi\cyl}{\partial\f^2\cyl}+\\
-&\r\cyl\Biggl(\r\cyl\frac{\partial^2\Psi\cyl}{\partial z^2\cyl}+\frac{\partial \Psi\cyl}{\partial \r\cyl}+k\popr\frac{\partial M}{\partial\f\cyl}\Biggr)\Biggr)\lambda\cyl\Biggr)=-iwp\c\Psi\c,\\
+\begin{split}
+&\frac{\de\Psi\c}{\de\r\c}=-iw{u\cyl}_{\r},
+\end{split}\\
+\begin{split}
+&\frac1{\r^2\cyl}\Biggl(\!\!-\lambda\cyl\frac{\partial^3L}{\partial z\cyl\partial\f^2\cyl}+2\mu\cyl \r^2\cyl\frac{\partial^3L}{\partial z\cyl\partial\r^2\cyl}+\Biggl(\!\!\!\bigl[\r\cyl^2-\r\cyl\bigr]\lambda\cyl+2\r\cyl^2\mu\cyl\!\!\Biggr) k\popr\frac{\partial^2M}{\partial \r\cyl\partial\f\cyl}+\\
+&+2\Biggl(\frac12\lambda\cyl+\mu\cyl\Biggr)\r^2\cyl\frac{\partial^2\Psi\cyl}{\partial \r^2\cyl}+\lambda\cyl\Biggl(\frac{\partial^2\Psi\cyl}{\partial\f^2\cyl}+\r\cyl^2\frac{\partial^2\Psi\cyl}{\partial z^2\cyl}+\r\cyl\frac{\partial \Psi\cyl}{\partial \r\cyl}+\\
+&+k\popr\r\cyl\frac{\partial M}{\partial\f\cyl}\Biggr)\Biggr)=-iwp\c\Psi\c,
+\end{split}\\
+\begin{split}
 &\frac{\mu\cyl}{\r^2\cyl}\Biggl(2\r\cyl\frac{\partial^2\Psi\cyl}{\partial\r\cyl\partial\f\cyl}+\r\cyl\frac{\partial^3 L}{\partial\r\cyl\partial\f\cyl\partial z\cyl}+\r\cyl k\popr\frac{\partial^2 M}{\partial\f^2\cyl}-\\
-&-2\frac{\partial \Psi\cyl}{\partial\f\cyl}-k\popr \r^2\cyl\frac{\partial^2 M}{\partial\r^2\cyl}+k\popr\r\cyl\frac{\partial M}{\partial\r\cyl}\Biggr)=0,\\
+&-2\frac{\partial \Psi\cyl}{\partial\f\cyl}-k\popr \r^2\cyl\frac{\partial^2 M}{\partial\r^2\cyl}+k\popr\r\cyl\frac{\partial M}{\partial\r\cyl}\Biggr)=0,
+\end{split}\\
+\begin{split}
 &\mu\cyl\Biggl(2\frac{\partial^2\Psi\cyl}{\partial\r\cyl\partial z\cyl}-\frac{\partial^3 L}{\partial\r^3\cyl}+\frac1{\r^2\cyl}\frac{\partial L}{\partial\r\cyl}-\frac1{\r\cyl}\frac{\partial^2 L}{\partial\r^2\cyl}+\frac2{\r^3\cyl}\frac{\partial^2 L}{\partial\f^2\cyl}-\frac1{\r^2\cyl}\frac{\partial^3 L}{\partial\r\cyl\partial\f^2\cyl}+\\
 &+\frac{\partial^3 L}{\partial\r\cyl\partial z^3\cyl}+k\popr\frac{\partial^2 M}{\partial\f\cyl\partial z\cyl}\Biggr)=0.
+\end{split}
 \end{align}
 
+Подставив разложения \eqref{razloj_u} в уравнения \eqref{equation_otn_u}, сократив на $\exp\{i\alpha z\cyl\},$ получим
+\begin{equation}\label{system_with_summ}
+\begin{aligned}
+&\sum\limits_{n=-\infty}^{\infty}\exp\{in\f\cyl\}\Biggl[\biggl(\lambda\l+2\mu\l\biggr)\frac{\partial^2{u\l}_{\r n}}{\partial \r^2\cyl}+\biggl(\frac{\partial\lambda\l}{\partial \r\cyl}+2\:\frac{\partial\mu\l}{\partial \r\cyl}+\\
+&+\frac{\lambda\l+2\mu\l}{\r\cyl}\biggr)\frac{\partial {u\l}_{\r n}}{\partial \r\cyl}-n^2\:\frac{\mu\l}{\r^2\cyl}{u\l}_{\r n}-\alpha^2\mu\l\:{u\l}_{\r n}+\\
+&+in\:\frac{\lambda\l+\mu\l}{\r\cyl}\frac{\partial {u\l}_{\f n}}{\partial \r\cyl}+\frac{in}{\r\cyl}\biggl(\frac{\partial\lambda\l}{\partial \r\cyl}-\frac{\lambda\l+3\mu\l}{\r\cyl}\biggr){u\l}_{\f n}+\\
+&+i\alpha\biggl(\lambda\l+\mu\l\biggr)\frac{\partial {u\l}_{z n}}{\partial \r\cyl}+i\alpha\:\frac{\partial\lambda\l}{\partial \r\cyl}\:{u\l}_{z n}+\\
+&+\biggl(\frac{1}{\r\cyl}\:\frac{\partial\lambda\l}{\partial \r\cyl}-\frac{\lambda\l+2\mu\l}{\r^2\cyl}+\om^2 p\l\biggr){u\l}_{\r n}\Biggr]=0,\\
+&\sum\limits_{n=-\infty}^{\infty}\exp\{in\f\cyl\}\biggl[in\:\frac{\lambda\l+\mu\l}{\r\cyl}\frac{\partial {u\l}_{\r n}}{\partial \r\cyl}+\frac{in}{\r\cyl}\biggl(\frac{\partial\mu\l}{\partial \r\cyl}+\frac{\lambda\l+3\:\mu\l}{\r\cyl}\biggr) {u\l}_{\r n}+\\
+&+\mu\l\:\frac{\partial^2 {u\l}_{\f n}}{\partial \r^2\cyl}-n^2\:\frac{\lambda\l+2\:\mu\l}{\r^2\cyl}\:{u\l}_{\f n}+\biggl(\frac{\partial\mu\l}{\partial \r\cyl}+\frac{\mu\l}{\r\cyl}\biggr)\frac{\partial {u\l}_{\f n}}{\partial \r\cyl}-\alpha^2\mu\l\:{u\l}_{\f n}-\\
+&-\alpha n\:\frac{\lambda\l+\mu\l}{\r\cyl}{u\l}_{z n}+\biggl(-\frac{1}{\r\cyl}\:\frac{\partial\mu\l}{\partial \r\cyl}-\frac{\mu\l}{\r^2\cyl}+\om^2 p\l\biggr){u\l}_{\f n}\biggr]=0,\\
+&\sum\limits_{n=-\infty}^{\infty}\exp\{in\f\cyl\}\biggl[i\alpha\biggl(\lambda\l+\mu\l\biggr)\frac{\partial{u\l}_{\r n}}{\partial \r\cyl}+i\alpha\biggl(\frac{\partial\mu\l}{\partial \r\cyl}+\frac{\lambda\l+\mu\l}{\r\cyl}\biggr){u\l}_{\r n}-\\
+&-\alpha n\:\frac{\lambda\l+\mu\l}{\r\cyl}\:{u\l}_{\f n}+\mu\l\:\frac{\partial^2 {u\l}_{z n}}{\partial \r^2\cyl}-\frac{n^2\mu\l}{\r^2\cyl}\:{u\l}_{z n}-\alpha^2\:\biggl(\lambda\l+2\:\mu\l\biggr){u\l}_{z n}+\\
+&+\biggl(\frac{\partial\mu\l}{\partial \r\cyl}+\frac{\mu\l}{\r\cyl}\biggr)\frac{\partial {u\l}_{z n}}{\partial \r\cyl}+\om^2 p\l\:{u\l}_{z n}\biggr]=0.
+\end{aligned}
+\end{equation}
+
+\todo{Переделать}
 Подставив разложения \eqref{razloj_u} в уравнения \eqref{equation_otn_u}, воспользовавшись уравнением для присоединенных многочленов Лежандра и свойством ортогональности этих многочленов, получим для каждого индекса $n \q(n = 0,1,\ldots;$ систему линейных однородных обыкновенных дифференциальных уравнений второго порядка относительно неизвестных функций $u_{\r\:n}(\r\cyl),$ $u_{\f\:n}(\r\cyl)$ и $u_{z\:n}(\r\cyl).$ А подставив разложения \eqref{razloj_u} в полученные граничные условия, найдем краевые условия и сможем решить  систему дифференциальных уравнений. После ее решения определим коэффициенты $A_n,$ $B_n,$ $C_n,$ $D_n,$ $E_n$ разложений  \eqref{razloj_psi_s}, \eqref{razloj_psi_o}, \eqref{razloj_psi_s}, \eqref{pazloj_psi}, \eqref{pazloj_l}, \eqref{pazloj_m} для каждой индекса $n,$ а зная коэффициенты ${A}_{n}$, по формуле \eqref{razloj_psi_s} найдем акустическое поле, рассеяное упругим цилиндром, имеющим произвольно расположенную полость и неоднородное покрытие.
+
+\newpage
+Подставив разложения \eqref{razloj_psi_o}, \eqref{razloj_psi_s} и \eqref{razloj_u} в уравнения \todo{правильно сделать ссылку} получим
+\begin{align}\label{gran_usl_1_with_summ}
+&\sum\limits_{n=-\infty}^{\infty}A_0i^nJ_n(\beta\en  \r\cyl)\exp\{in(\f\cyl-\hat\f\en)\}+\\
+&+A_nH_n(\beta\cyl \r\cyl)\exp\{in\f\cyl\}=-iw\sum_{n=-\infty}^{\infty}{u\l}_{\r\:n}(\r\cyl)\exp\{in\f\cyl\},\\
+&\lambda\l\Biggl(\frac{\partial {u\l}_{\r}}{\partial \r\l}+\frac{1}{\r\l}\biggl(\frac{\partial {u\l}_\f}{\partial\f\l}+{u\l}_{\r}\biggr)+\frac{\partial {u\l}_z}{\partial z\l}\Biggr)+2\:\mu\l\:\frac{\partial {u\l}_{\r}}{\partial \r\l}=-iwp\en(\Psi_{o}+\Psi_s),\\
+&\mu\l\Biggl(\frac{1}{\r\l}\frac{\partial {u\l}_{\r}}{\partial\f\l}+\frac{\partial {u\l}_{\f}}{\partial \r\l}-\frac{{u\l}_{\f}}{\r\l}\Biggr)=0,\\
+&\mu\l\Biggl(\frac{\partial {u\l}_z}{\partial \r\l}+\frac{\partial {u\l}_{\r}}{\partial z\l}\Biggr)=0.\\
+ \end{align}
+
+
 \newpage
 \subsection{Решение краевой задачи для системы обыкновенных дифференциальных уравнений}
 
